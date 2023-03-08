@@ -1,5 +1,8 @@
 import 'package:asltranslator/constants.dart';
+import 'package:avatar_glow/avatar_glow.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_tts/flutter_tts.dart';
+import 'package:speech_to_text/speech_to_text.dart';
 
 class CommunicateScreen extends StatefulWidget {
   const CommunicateScreen({super.key});
@@ -9,20 +12,348 @@ class CommunicateScreen extends StatefulWidget {
 }
 
 class _CommunicateScreenState extends State<CommunicateScreen> {
+  double get height => MediaQuery.of(context).size.height;
+  double get width => MediaQuery.of(context).size.width;
+  ////////////////////////////////////////////////////////////////////////////////
+  SpeechToText speechToText = SpeechToText();
+  var voicetext = 'Type your text here\nor\nHold the mic to speak';
+  String hintText = 'Type your text here\nor\nHold the mic to speak';
+  TextEditingController voicetextEditingController = TextEditingController();
+  var isListening = false;
+  bool isRecognized = false;
+  bool isASL = true;
+  List<String> aslWords = [
+    'hello',
+    'goodbye',
+    'emergency',
+    'good afternoon',
+    'good evening',
+    'good morning',
+    'help',
+    'how are you',
+    "i'm fine",
+    'sorry',
+    'welcome',
+    'thank you'
+  ];
+  ////////////////////////////////////////////////////////////////////////////////
+  FlutterTts flutterTts = FlutterTts();
+  String textvoice = "i'm fine";
+  ////////////////////////////////////////////////////////////////////////////////
   @override
   Widget build(BuildContext context) {
-    final width = MediaQuery.of(context).size.width;
-    final height = MediaQuery.of(context).size.height;
     return Scaffold(
+      backgroundColor: AppColors.beige,
+      appBar: AppBar(
+        elevation: 0,
+        title: Text('Communicate', style: AppTextStyles.title),
+        backgroundColor: AppColors.beige,
+        // leading: IconButton(
+        //   icon: const Icon(
+        //     Icons.arrow_back_ios,
+        //     color: AppColors.blue,
+        //     size: 20,
+        //   ),
+        //   onPressed: () {
+        //     Navigator.pop(context);
+        //   },
+        // ),
+      ),
       body: SafeArea(
-        child: Container(
-          alignment: Alignment.center,
-          width: width,
-          height: height,
-          color: AppColors.beige,
-          child: Text('Communicate Screen'),
+        child: SingleChildScrollView(
+          scrollDirection: Axis.vertical,
+          child: Container(
+              padding: const EdgeInsets.symmetric(horizontal: 30),
+              height: height - 149,
+              width: width,
+              color: AppColors.beige,
+              child: Column(
+                children: [
+                  SizedBox(height: height * 0.02),
+                  Container(
+                    height: height * 0.05,
+                    width: width,
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: [
+                        Container(
+                          height: height * 0.05,
+                          width: width * 0.3,
+                          decoration: BoxDecoration(
+                            color: AppColors.blue,
+                            borderRadius: BorderRadius.circular(10),
+                          ),
+                          child: Center(
+                            child: Text(
+                              isASL ? 'English' : 'ASL',
+                              style: AppTextStyles.body,
+                            ),
+                          ),
+                        ),
+                        GestureDetector(
+                          onTap: () {
+                            setState(() {
+                              isASL = !isASL;
+                            });
+                          },
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: const [
+                              Icon(
+                                Icons.arrow_forward,
+                                color: AppColors.blue,
+                                size: 20,
+                              ),
+                              Icon(
+                                Icons.arrow_back,
+                                color: AppColors.blue,
+                                size: 20,
+                              ),
+                            ],
+                          ),
+                        ),
+                        Container(
+                          height: height * 0.05,
+                          width: width * 0.3,
+                          decoration: BoxDecoration(
+                            color: AppColors.blue,
+                            borderRadius: BorderRadius.circular(10),
+                          ),
+                          child: Center(
+                            child: Text(
+                              isASL ? 'ASL' : 'English',
+                              style: AppTextStyles.body,
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                  SizedBox(
+                    height: height * 0.03,
+                  ),
+                  isASL ? speechToASL() : asltoSpeech(),
+                ],
+              )),
         ),
       ),
+    );
+  }
+
+  Widget speechToASL() {
+    return Column(
+      children: [
+        Container(
+          width: width,
+          height: height * 0.31,
+          child: Stack(
+            children: [
+              Container(
+                padding: const EdgeInsets.all(30),
+                alignment: Alignment.center,
+                width: width,
+                height: height * 0.31,
+                decoration: BoxDecoration(
+                  color: AppColors.orange,
+                  borderRadius: BorderRadius.all(
+                    Radius.circular(20),
+                  ),
+                ),
+                child: TextField(
+                  controller: voicetextEditingController,
+                  textAlign: TextAlign.center,
+                  decoration: InputDecoration(
+                      hintText: hintText,
+                      hintStyle: AppTextStyles.body,
+                      border: InputBorder.none,
+                      hintMaxLines: 3),
+                  style: AppTextStyles.title,
+                  onChanged: (value) {
+                    setState(() {
+                      var lowerCaseValue = value.toLowerCase();
+                      if (aslWords.contains(lowerCaseValue)) {
+                        voicetext = lowerCaseValue;
+                        print("Recognized Type Word: " + value);
+                        print("Recognized Type Word lowercase: " +
+                            lowerCaseValue);
+                        print("Recognized Type Word voice text: " + voicetext);
+                        isRecognized = true;
+                      } else {
+                        voicetext = lowerCaseValue;
+                        isRecognized = false;
+                      }
+                    });
+                  },
+                ),
+              ),
+              Align(
+                alignment: Alignment.bottomRight,
+                child: AvatarGlow(
+                  endRadius: 65.0,
+                  animate: isListening,
+                  duration: const Duration(milliseconds: 2000),
+                  glowColor: AppColors.blue,
+                  repeat: true,
+                  repeatPauseDuration: const Duration(milliseconds: 100),
+                  showTwoGlows: true,
+                  child: GestureDetector(
+                    onTapDown: (details) async {
+                      if (!isListening) {
+                        var available = await speechToText.initialize();
+                        hintText = '';
+                        if (available) {
+                          setState(() {
+                            isListening = true;
+                            speechToText.listen(
+                              onResult: (result) {
+                                setState(() {
+                                  print(result.recognizedWords);
+                                  if (aslWords
+                                      .contains(result.recognizedWords)) {
+                                    print("Recognized Voice Word: " +
+                                        result.recognizedWords);
+                                    voicetext = result.recognizedWords;
+                                    voicetextEditingController.text =
+                                        result.recognizedWords;
+                                    isRecognized = true;
+                                  }
+                                  //to display text if no ASL word is found
+                                  else {
+                                    voicetext = result.recognizedWords;
+                                    voicetextEditingController.text =
+                                        result.recognizedWords;
+                                    isRecognized = false;
+                                  }
+                                });
+                              },
+                            );
+                          });
+                        }
+                      }
+                    },
+                    onTapUp: (details) {
+                      setState(() {
+                        isListening = false;
+                      });
+                      speechToText.stop();
+                    },
+                    child: CircleAvatar(
+                      backgroundColor: AppColors.blue,
+                      radius: 30,
+                      child: Icon(
+                        isListening ? Icons.mic : Icons.mic_none,
+                        color: AppColors.beige,
+                      ),
+                    ),
+                  ),
+                ),
+              ),
+            ],
+          ),
+        ),
+        SizedBox(
+          height: height * 0.03,
+        ),
+        Container(
+          margin: const EdgeInsets.only(bottom: 20),
+          height: height * 0.31,
+          width: width,
+          decoration: BoxDecoration(
+            color: AppColors.orange,
+            borderRadius: BorderRadius.all(
+              Radius.circular(20),
+            ),
+          ),
+          child: isRecognized
+              ? ClipRRect(
+                  borderRadius: BorderRadius.circular(20),
+                  child: Image.asset(
+                    'assets/aslSamples/$voicetext.gif',
+                    fit: BoxFit.cover,
+                  ))
+              : Center(
+                  child: Text(
+                    'No ASL Word Found',
+                    style: AppTextStyles.title,
+                  ),
+                ),
+        ),
+      ],
+    );
+  }
+
+  Widget asltoSpeech() {
+    speak(String textvoice) async {
+      await flutterTts.setLanguage("en-US");
+      await flutterTts.setPitch(1);
+      await flutterTts.speak(textvoice);
+    }
+
+    return Column(
+      children: [
+        Container(
+          alignment: Alignment.center,
+          width: width,
+          height: height * 0.31,
+          decoration: BoxDecoration(
+            color: AppColors.orange,
+            borderRadius: BorderRadius.all(
+              Radius.circular(20),
+            ),
+          ),
+          child: Text(
+            'CAMERA',
+            style: AppTextStyles.title,
+          ),
+        ),
+        SizedBox(
+          height: height * 0.03,
+        ),
+        Container(
+          width: width,
+          height: height * 0.31,
+          child: Stack(
+            children: [
+              Container(
+                padding: const EdgeInsets.all(30),
+                alignment: Alignment.center,
+                width: width,
+                height: height * 0.31,
+                decoration: BoxDecoration(
+                  color: AppColors.orange,
+                  borderRadius: BorderRadius.all(
+                    Radius.circular(20),
+                  ),
+                ),
+                child: Text(
+                  'Text/Speech',
+                  style: AppTextStyles.title,
+                ),
+              ),
+              Align(
+                alignment: Alignment.bottomRight,
+                child: Container(
+                  margin: const EdgeInsets.only(bottom: 30, right: 30),
+                  child: CircleAvatar(
+                    backgroundColor: AppColors.blue,
+                    radius: 30,
+                    child: IconButton(
+                      onPressed: () {
+                        speak(textvoice);
+                      },
+                      icon: const Icon(
+                        Icons.volume_up,
+                        color: AppColors.beige,
+                      ),
+                    ),
+                  ),
+                ),
+              )
+            ],
+          ),
+        ),
+      ],
     );
   }
 }

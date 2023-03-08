@@ -29,11 +29,15 @@ environment:
 # the latest version available on pub.dev. To see which dependencies have newer
 # versions available, run `flutter pub outdated`.
 dependencies:
+  avatar_glow: ^2.0.2
+  camera: ^0.10.3+2
   cupertino_icons: ^1.0.2
   curved_navigation_bar: ^1.0.3
   flutter:
     sdk: flutter
+  flutter_tts: ^3.6.3
   google_fonts: ^4.0.3
+  speech_to_text: ^6.1.1
 
 dev_dependencies:
   flutter_launcher_icons: ^0.11.0
@@ -59,6 +63,7 @@ flutter:
     - assets/
     - assets/gestures/
     - assets/icons/
+    - assets/aslSamples/
   # To add assets to your application, add an assets section, like this:
   # assets:
   #   - images/a_dot_burr.jpeg
