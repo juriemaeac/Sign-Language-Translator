@@ -1,5 +1,6 @@
 import 'package:asltranslator/constants.dart';
 import 'package:avatar_glow/avatar_glow.dart';
+import 'package:camera/camera.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_tts/flutter_tts.dart';
 import 'package:speech_to_text/speech_to_text.dart';
@@ -40,36 +41,80 @@ class _CommunicateScreenState extends State<CommunicateScreen> {
   FlutterTts flutterTts = FlutterTts();
   String textvoice = "i'm fine";
   ////////////////////////////////////////////////////////////////////////////////
+  late List<CameraDescription> cameras;
+  late CameraController cameraController;
+  bool isFrontCam = false;
+
+  @override
+  void initState() {
+    startCamera();
+    super.initState();
+  }
+
+  void startCamera() async {
+    cameras = await availableCameras();
+    cameraController =
+        CameraController(cameras[0], ResolutionPreset.high, enableAudio: false);
+    await cameraController.initialize().then((value) {
+      if (!mounted) {
+        return;
+      }
+      setState(() {});
+    }).catchError((e) {
+      print(e);
+    });
+  }
+
+  @override
+  void dispose() {
+    cameraController.dispose();
+    super.dispose();
+  }
+
+  ///
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: AppColors.beige,
-      appBar: AppBar(
-        elevation: 0,
-        title: Text('Communicate', style: AppTextStyles.title),
-        backgroundColor: AppColors.beige,
-        // leading: IconButton(
-        //   icon: const Icon(
-        //     Icons.arrow_back_ios,
-        //     color: AppColors.blue,
-        //     size: 20,
-        //   ),
-        //   onPressed: () {
-        //     Navigator.pop(context);
-        //   },
-        // ),
-      ),
+      // appBar: AppBar(
+      //   automaticallyImplyLeading: false,
+
+      //   elevation: 0,
+      //   title: Padding(
+      //     padding: const EdgeInsets.only(left: 15, top: 30),
+      //     child: Text('Communicate',
+      //         style: AppTextStyles.title.copyWith(
+      //           fontSize: 30,
+      //         )),
+      //   ),
+      //   backgroundColor: AppColors.beige,
+      //   // leading: IconButton(
+      //   //   icon: const Icon(
+      //   //     Icons.arrow_back_ios,
+      //   //     color: AppColors.blue,
+      //   //     size: 20,
+      //   //   ),
+      //   //   onPressed: () {
+      //   //     Navigator.pop(context);
+      //   //   },
+      //   // ),
+      // ),
       body: SafeArea(
         child: SingleChildScrollView(
           scrollDirection: Axis.vertical,
           child: Container(
-              padding: const EdgeInsets.symmetric(horizontal: 30),
-              height: height - 149,
+              padding: const EdgeInsets.all(30),
+              height: height - 80,
               width: width,
               color: AppColors.beige,
               child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  SizedBox(height: height * 0.02),
+                  Text('Communicate',
+                      style: AppTextStyles.title.copyWith(
+                        fontSize: 30,
+                      )),
+                  SizedBox(height: height * 0.03),
                   Container(
                     height: height * 0.05,
                     width: width,
@@ -81,13 +126,15 @@ class _CommunicateScreenState extends State<CommunicateScreen> {
                           height: height * 0.05,
                           width: width * 0.3,
                           decoration: BoxDecoration(
-                            color: AppColors.blue,
+                            color: isASL ? AppColors.blue : AppColors.orange,
                             borderRadius: BorderRadius.circular(10),
                           ),
                           child: Center(
                             child: Text(
                               isASL ? 'English' : 'ASL',
-                              style: AppTextStyles.body,
+                              style: isASL
+                                  ? AppTextStyles.body
+                                  : AppTextStyles.title,
                             ),
                           ),
                         ),
@@ -117,13 +164,15 @@ class _CommunicateScreenState extends State<CommunicateScreen> {
                           height: height * 0.05,
                           width: width * 0.3,
                           decoration: BoxDecoration(
-                            color: AppColors.blue,
+                            color: isASL ? AppColors.orange : AppColors.blue,
                             borderRadius: BorderRadius.circular(10),
                           ),
                           child: Center(
                             child: Text(
                               isASL ? 'ASL' : 'English',
-                              style: AppTextStyles.body,
+                              style: isASL
+                                  ? AppTextStyles.title
+                                  : AppTextStyles.body,
                             ),
                           ),
                         ),
@@ -146,14 +195,14 @@ class _CommunicateScreenState extends State<CommunicateScreen> {
       children: [
         Container(
           width: width,
-          height: height * 0.31,
+          height: height * 0.32,
           child: Stack(
             children: [
               Container(
                 padding: const EdgeInsets.all(30),
                 alignment: Alignment.center,
                 width: width,
-                height: height * 0.31,
+                height: height * 0.32,
                 decoration: BoxDecoration(
                   color: AppColors.orange,
                   borderRadius: BorderRadius.all(
@@ -165,7 +214,7 @@ class _CommunicateScreenState extends State<CommunicateScreen> {
                   textAlign: TextAlign.center,
                   decoration: InputDecoration(
                       hintText: hintText,
-                      hintStyle: AppTextStyles.body,
+                      hintStyle: AppTextStyles.title,
                       border: InputBorder.none,
                       hintMaxLines: 3),
                   style: AppTextStyles.title,
@@ -257,7 +306,7 @@ class _CommunicateScreenState extends State<CommunicateScreen> {
         ),
         Container(
           margin: const EdgeInsets.only(bottom: 20),
-          height: height * 0.31,
+          height: height * 0.32,
           width: width,
           decoration: BoxDecoration(
             color: AppColors.orange,
@@ -290,21 +339,27 @@ class _CommunicateScreenState extends State<CommunicateScreen> {
       await flutterTts.speak(textvoice);
     }
 
+    if (!cameraController.value.isInitialized) {
+      return SizedBox();
+    }
     return Column(
       children: [
         Container(
           alignment: Alignment.center,
           width: width,
-          height: height * 0.31,
+          height: height * 0.32,
           decoration: BoxDecoration(
-            color: AppColors.orange,
+            //color: AppColors.orange,
             borderRadius: BorderRadius.all(
               Radius.circular(20),
             ),
           ),
-          child: Text(
-            'CAMERA',
-            style: AppTextStyles.title,
+          child: ClipRRect(
+            borderRadius: BorderRadius.circular(20),
+            child: AspectRatio(
+              aspectRatio: 1.3,
+              child: CameraPreview(cameraController),
+            ),
           ),
         ),
         SizedBox(
@@ -312,14 +367,14 @@ class _CommunicateScreenState extends State<CommunicateScreen> {
         ),
         Container(
           width: width,
-          height: height * 0.31,
+          height: height * 0.32,
           child: Stack(
             children: [
               Container(
                 padding: const EdgeInsets.all(30),
                 alignment: Alignment.center,
                 width: width,
-                height: height * 0.31,
+                height: height * 0.32,
                 decoration: BoxDecoration(
                   color: AppColors.orange,
                   borderRadius: BorderRadius.all(

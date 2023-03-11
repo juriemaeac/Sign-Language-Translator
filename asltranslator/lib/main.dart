@@ -1,8 +1,10 @@
+import 'package:animated_splash_screen/animated_splash_screen.dart';
 import 'package:asltranslator/home_screen.dart';
 import 'package:asltranslator/start_screen.dart';
 import 'package:flutter/material.dart';
 
 void main() {
+  WidgetsFlutterBinding.ensureInitialized();
   runApp(const MyApp());
 }
 
@@ -17,7 +19,15 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
       debugShowCheckedModeBanner: false,
-      home: const StartScreen(),
+      home: AnimatedSplashScreen(
+        splash: Image.asset(
+          'assets/cadate_logo.png',
+        ),
+        nextScreen: const StartScreen(),
+        splashTransition: SplashTransition.fadeTransition,
+        backgroundColor: Colors.white,
+        duration: 800,
+      ),
     );
   }
 }
