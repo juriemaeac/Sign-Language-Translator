@@ -4,6 +4,7 @@ import 'package:camera/camera.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_tts/flutter_tts.dart';
 import 'package:speech_to_text/speech_to_text.dart';
+import 'package:tflite/tflite.dart';
 
 class CommunicateScreen extends StatefulWidget {
   const CommunicateScreen({super.key});
@@ -43,26 +44,65 @@ class _CommunicateScreenState extends State<CommunicateScreen> {
   ////////////////////////////////////////////////////////////////////////////////
   late List<CameraDescription> cameras;
   late CameraController cameraController;
+  CameraImage? cameraImage;
+  String output = '';
   bool isFrontCam = false;
 
   @override
   void initState() {
     startCamera();
+    loadModel();
     super.initState();
   }
 
   void startCamera() async {
     cameras = await availableCameras();
-    cameraController =
-        CameraController(cameras[0], ResolutionPreset.high, enableAudio: false);
+    cameraController = CameraController(cameras[0], ResolutionPreset.medium,
+        enableAudio: false);
     await cameraController.initialize().then((value) {
       if (!mounted) {
         return;
       }
-      setState(() {});
+      setState(() {
+        cameraController.startImageStream((imageFromStream) {
+          cameraImage = imageFromStream;
+          runModel();
+        });
+      });
     }).catchError((e) {
       print(e);
     });
+  }
+
+  runModel() async {
+    if (cameraImage != null) {
+      var recognitions = await Tflite.runModelOnFrame(
+        bytesList: cameraImage!.planes.map((plane) {
+          return plane.bytes;
+        }).toList(),
+        imageHeight: cameraImage!.height,
+        imageWidth: cameraImage!.width,
+        imageMean: 127.5,
+        imageStd: 127.5,
+        rotation: 90,
+        numResults: 2,
+        threshold: 0.1,
+        asynch: true,
+      );
+      recognitions!.forEach((response) {
+        setState(() {
+          output = response['label'];
+          textvoice = response['label'];
+        });
+      });
+    }
+  }
+
+  loadModel() async {
+    await Tflite.loadModel(
+      model: 'assets/model_unquant.tflite',
+      labels: 'assets/labels.txt',
+    );
   }
 
   @override
@@ -357,7 +397,7 @@ class _CommunicateScreenState extends State<CommunicateScreen> {
           child: ClipRRect(
             borderRadius: BorderRadius.circular(20),
             child: AspectRatio(
-              aspectRatio: 1.3,
+              aspectRatio: cameraController.value.aspectRatio,
               child: CameraPreview(cameraController),
             ),
           ),
@@ -382,7 +422,7 @@ class _CommunicateScreenState extends State<CommunicateScreen> {
                   ),
                 ),
                 child: Text(
-                  'Text/Speech',
+                  output ?? 'Scanning for ASL Word',
                   style: AppTextStyles.title,
                 ),
               ),

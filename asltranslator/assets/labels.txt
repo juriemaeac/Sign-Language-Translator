@@ -1,0 +1,10 @@
+0 yes
+1 no
+2 thanks
+3 welcome
+4 emergency
+5 hello
+6 sorry
+7 imfine
+8 iloveyou
+9 help
