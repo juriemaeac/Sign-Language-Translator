@@ -41,14 +41,13 @@ class _CommunicateScreenState extends State<CommunicateScreen> {
   ];
   ////////////////////////////////////////////////////////////////////////////////
   FlutterTts flutterTts = FlutterTts();
-  String textvoice = "i'm fine";
+  String textvoice = "Waiting for A S L Word";
   ////////////////////////////////////////////////////////////////////////////////
   //late List<CameraDescription> cameras;
   late CameraController cameraController;
   CameraImage? cameraImage;
-  String output = '';
+  String output = 'Scanning for A S L Word';
   bool isFrontCam = false;
-
   @override
   void initState() {
     startCamera();
@@ -90,6 +89,7 @@ class _CommunicateScreenState extends State<CommunicateScreen> {
         threshold: 0.1,
         asynch: true,
       );
+      print(recognitions);
       recognitions!.forEach((response) {
         setState(() {
           output = response['label'];
@@ -103,12 +103,16 @@ class _CommunicateScreenState extends State<CommunicateScreen> {
     await Tflite.loadModel(
       model: 'assets/model_unquant.tflite',
       labels: 'assets/labels.txt',
+      numThreads: 1,
+      isAsset: true,
+      useGpuDelegate: false,
     );
   }
 
   @override
-  void dispose() {
+  void dispose() async {
     cameraController.dispose();
+    await Tflite.close();
     super.dispose();
   }
 
@@ -390,17 +394,14 @@ class _CommunicateScreenState extends State<CommunicateScreen> {
           width: width,
           height: height * 0.32,
           decoration: BoxDecoration(
-            //color: AppColors.orange,
+            color: AppColors.orange,
             borderRadius: BorderRadius.all(
               Radius.circular(20),
             ),
           ),
           child: ClipRRect(
             borderRadius: BorderRadius.circular(20),
-            child: AspectRatio(
-              aspectRatio: cameraController.value.aspectRatio,
-              child: CameraPreview(cameraController),
-            ),
+            child: CameraPreview(cameraController),
           ),
         ),
         SizedBox(
