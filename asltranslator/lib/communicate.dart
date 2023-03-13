@@ -1,4 +1,5 @@
 import 'package:asltranslator/constants.dart';
+import 'package:asltranslator/main.dart';
 import 'package:avatar_glow/avatar_glow.dart';
 import 'package:camera/camera.dart';
 import 'package:flutter/material.dart';
@@ -42,7 +43,7 @@ class _CommunicateScreenState extends State<CommunicateScreen> {
   FlutterTts flutterTts = FlutterTts();
   String textvoice = "i'm fine";
   ////////////////////////////////////////////////////////////////////////////////
-  late List<CameraDescription> cameras;
+  //late List<CameraDescription> cameras;
   late CameraController cameraController;
   CameraImage? cameraImage;
   String output = '';
@@ -57,7 +58,7 @@ class _CommunicateScreenState extends State<CommunicateScreen> {
 
   void startCamera() async {
     cameras = await availableCameras();
-    cameraController = CameraController(cameras[0], ResolutionPreset.medium,
+    cameraController = CameraController(cameras![0], ResolutionPreset.medium,
         enableAudio: false);
     await cameraController.initialize().then((value) {
       if (!mounted) {
@@ -422,7 +423,7 @@ class _CommunicateScreenState extends State<CommunicateScreen> {
                   ),
                 ),
                 child: Text(
-                  output ?? 'Scanning for ASL Word',
+                  output,
                   style: AppTextStyles.title,
                 ),
               ),
