@@ -73,7 +73,7 @@ class _StartScreenState extends State<StartScreen> {
                     height: MediaQuery.of(context).size.height * 0.88,
                     width: MediaQuery.of(context).size.width * 0.88,
                     decoration: const BoxDecoration(
-                        color: AppColors.darkcyan, shape: BoxShape.circle),
+                        color: AppColors.cyan, shape: BoxShape.circle),
                     child: FittedBox(
                       fit: BoxFit.fitWidth,
                       child: Text(

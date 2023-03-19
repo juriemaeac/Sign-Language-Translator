@@ -65,7 +65,7 @@ class _BottomNavBarState extends State<BottomNavBar> {
               ? AppColors.beige
               : _currentIndex == 1
                   ? AppColors.blue
-                  : AppColors.beige,
+                  : AppColors.lightorange,
           animationCurve: Curves.easeInOut,
           animationDuration: const Duration(milliseconds: 600),
           onTap: (index) {
