@@ -57,8 +57,8 @@ class _CommunicateScreenState extends State<CommunicateScreen> {
 
   void startCamera() async {
     cameras = await availableCameras();
-    cameraController = CameraController(cameras![1], ResolutionPreset.medium,
-        enableAudio: false);
+    cameraController =
+        CameraController(cameras![1], ResolutionPreset.low, enableAudio: false);
     await cameraController.initialize().then((value) {
       if (!mounted) {
         return;
