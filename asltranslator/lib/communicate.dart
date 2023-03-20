@@ -25,19 +25,45 @@ class _CommunicateScreenState extends State<CommunicateScreen> {
   var isListening = false;
   bool isRecognized = false;
   bool isASL = true;
-  List<String> aslWords = [
-    'hello',
-    'goodbye',
-    'emergency',
-    'good afternoon',
-    'good evening',
-    'good morning',
-    'help',
-    'how are you',
-    "i'm fine",
-    'sorry',
-    'welcome',
-    'thank you'
+  // List<String> aslWords = [
+  //   'hello',
+  //   'goodbye',
+  //   'emergency',
+  //   'good afternoon',
+  //   'good evening',
+  //   'good morning',
+  //   'help',
+  //   'how are you',
+  //   "i'm fine",
+  //   'sorry',
+  //   'welcome',
+  //   'thank you'
+  // ];
+
+  List<String> aslLabels = [
+    '0 yes',
+    '1 no',
+    '2 thanks',
+    '3 welcome',
+    '4 emergency',
+    '5 hello',
+    '6 sorry',
+    '7 imfine',
+    '8 iloveyou',
+    '9 help',
+  ];
+
+  List<String> aslWordsNew = [
+    'Yes',
+    'No',
+    'Thank You',
+    'Welcome',
+    'Emergency',
+    'Hello',
+    'Sorry',
+    "I'm Fine",
+    'I love you',
+    'Help',
   ];
   ////////////////////////////////////////////////////////////////////////////////
   FlutterTts flutterTts = FlutterTts();
@@ -92,8 +118,16 @@ class _CommunicateScreenState extends State<CommunicateScreen> {
       print(recognitions);
       recognitions!.forEach((response) {
         setState(() {
-          output = response['label'];
-          textvoice = response['label'];
+          String modelResponse = response['label'];
+          if (aslLabels.contains(modelResponse)) {
+            int index = aslLabels.indexOf(modelResponse);
+            String parsedWord = aslWordsNew[index];
+            print("Recognized Word: " + parsedWord);
+            output = parsedWord;
+            textvoice = parsedWord;
+          }
+          // output = response['label'];
+          // textvoice = response['label'];
         });
       });
     }
@@ -266,7 +300,7 @@ class _CommunicateScreenState extends State<CommunicateScreen> {
                   onChanged: (value) {
                     setState(() {
                       var lowerCaseValue = value.toLowerCase();
-                      if (aslWords.contains(lowerCaseValue)) {
+                      if (aslWordsNew.contains(lowerCaseValue)) {
                         voicetext = lowerCaseValue;
                         print("Recognized Type Word: " + value);
                         print("Recognized Type Word lowercase: " +
@@ -303,7 +337,7 @@ class _CommunicateScreenState extends State<CommunicateScreen> {
                               onResult: (result) {
                                 setState(() {
                                   print(result.recognizedWords);
-                                  if (aslWords
+                                  if (aslWordsNew
                                       .contains(result.recognizedWords)) {
                                     print("Recognized Voice Word: " +
                                         result.recognizedWords);
