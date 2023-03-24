@@ -6,6 +6,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_tts/flutter_tts.dart';
 import 'package:speech_to_text/speech_to_text.dart';
 import 'package:tflite/tflite.dart';
+import 'package:intl/intl.dart' show toBeginningOfSentenceCase;
 
 class CommunicateScreen extends StatefulWidget {
   const CommunicateScreen({super.key});
@@ -25,20 +26,6 @@ class _CommunicateScreenState extends State<CommunicateScreen> {
   var isListening = false;
   bool isRecognized = false;
   bool isASL = true;
-  // List<String> aslWords = [
-  //   'hello',
-  //   'goodbye',
-  //   'emergency',
-  //   'good afternoon',
-  //   'good evening',
-  //   'good morning',
-  //   'help',
-  //   'how are you',
-  //   "i'm fine",
-  //   'sorry',
-  //   'welcome',
-  //   'thank you'
-  // ];
 
   List<String> aslLabels = [
     '0 yes',
@@ -56,12 +43,12 @@ class _CommunicateScreenState extends State<CommunicateScreen> {
   List<String> aslWordsNew = [
     'Yes',
     'No',
-    'Thank You',
+    'Thank you',
     'Welcome',
     'Emergency',
     'Hello',
     'Sorry',
-    "I'm Fine",
+    "I'm fine",
     'I love you',
     'Help',
   ];
@@ -74,6 +61,7 @@ class _CommunicateScreenState extends State<CommunicateScreen> {
   CameraImage? cameraImage;
   String output = 'Scanning for A S L Word';
   bool isFrontCam = false;
+  int cameraIndex = 0;
   @override
   void initState() {
     startCamera();
@@ -83,8 +71,9 @@ class _CommunicateScreenState extends State<CommunicateScreen> {
 
   void startCamera() async {
     cameras = await availableCameras();
-    cameraController =
-        CameraController(cameras![1], ResolutionPreset.low, enableAudio: false);
+    cameraController = CameraController(
+        cameras![cameraIndex], ResolutionPreset.medium,
+        enableAudio: false);
     await cameraController.initialize().then((value) {
       if (!mounted) {
         return;
@@ -118,6 +107,9 @@ class _CommunicateScreenState extends State<CommunicateScreen> {
       print(recognitions);
       recognitions!.forEach((response) {
         setState(() {
+          //output = response['label'];
+          //textvoice = response['label'];
+
           String modelResponse = response['label'];
           if (aslLabels.contains(modelResponse)) {
             int index = aslLabels.indexOf(modelResponse);
@@ -126,8 +118,6 @@ class _CommunicateScreenState extends State<CommunicateScreen> {
             output = parsedWord;
             textvoice = parsedWord;
           }
-          // output = response['label'];
-          // textvoice = response['label'];
         });
       });
     }
@@ -143,41 +133,18 @@ class _CommunicateScreenState extends State<CommunicateScreen> {
     );
   }
 
-  @override
-  void dispose() async {
-    cameraController.dispose();
-    await Tflite.close();
-    super.dispose();
-  }
+  // @override
+  // void dispose() async {
+  //   cameraController.dispose();
+  //   await Tflite.close();
+  //   super.dispose();
+  // }
 
   ///
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: AppColors.beige,
-      // appBar: AppBar(
-      //   automaticallyImplyLeading: false,
-
-      //   elevation: 0,
-      //   title: Padding(
-      //     padding: const EdgeInsets.only(left: 15, top: 30),
-      //     child: Text('Communicate',
-      //         style: AppTextStyles.title.copyWith(
-      //           fontSize: 30,
-      //         )),
-      //   ),
-      //   backgroundColor: AppColors.beige,
-      //   // leading: IconButton(
-      //   //   icon: const Icon(
-      //   //     Icons.arrow_back_ios,
-      //   //     color: AppColors.blue,
-      //   //     size: 20,
-      //   //   ),
-      //   //   onPressed: () {
-      //   //     Navigator.pop(context);
-      //   //   },
-      //   // ),
-      // ),
       body: SafeArea(
         child: SingleChildScrollView(
           scrollDirection: Axis.vertical,
@@ -299,16 +266,19 @@ class _CommunicateScreenState extends State<CommunicateScreen> {
                   style: AppTextStyles.title,
                   onChanged: (value) {
                     setState(() {
-                      var lowerCaseValue = value.toLowerCase();
-                      if (aslWordsNew.contains(lowerCaseValue)) {
-                        voicetext = lowerCaseValue;
+                      //var lowerCaseValue = value.toLowerCase();
+                      var capitalizedValue =
+                          toBeginningOfSentenceCase(value) ?? "";
+                      if (aslWordsNew.contains(value)) {
+                        voicetext = capitalizedValue;
                         print("Recognized Type Word: " + value);
-                        print("Recognized Type Word lowercase: " +
-                            lowerCaseValue);
-                        print("Recognized Type Word voice text: " + voicetext);
+                        print("Recognized Type Word Capital: " +
+                            capitalizedValue);
+                        print("Recognized Type Word voice text: " +
+                            capitalizedValue);
                         isRecognized = true;
                       } else {
-                        voicetext = lowerCaseValue;
+                        voicetext = capitalizedValue;
                         isRecognized = false;
                       }
                     });
@@ -337,20 +307,25 @@ class _CommunicateScreenState extends State<CommunicateScreen> {
                               onResult: (result) {
                                 setState(() {
                                   print(result.recognizedWords);
-                                  if (aslWordsNew
-                                      .contains(result.recognizedWords)) {
+                                  var speechResult = toBeginningOfSentenceCase(
+                                          result.recognizedWords) ??
+                                      "";
+                                  if (aslWordsNew.contains(speechResult)) {
                                     print("Recognized Voice Word: " +
                                         result.recognizedWords);
-                                    voicetext = result.recognizedWords;
+                                    print(
+                                        "Recognized Voice Word Capitalized: " +
+                                            result.recognizedWords);
+                                    voicetext = speechResult;
                                     voicetextEditingController.text =
-                                        result.recognizedWords;
+                                        speechResult;
                                     isRecognized = true;
                                   }
                                   //to display text if no ASL word is found
                                   else {
-                                    voicetext = result.recognizedWords;
+                                    voicetext = speechResult;
                                     voicetextEditingController.text =
-                                        result.recognizedWords;
+                                        speechResult;
                                     isRecognized = false;
                                   }
                                 });
@@ -424,7 +399,7 @@ class _CommunicateScreenState extends State<CommunicateScreen> {
     return Column(
       children: [
         Container(
-          alignment: Alignment.center,
+          alignment: Alignment.centerLeft,
           width: width,
           height: height * 0.32,
           decoration: BoxDecoration(
@@ -433,9 +408,48 @@ class _CommunicateScreenState extends State<CommunicateScreen> {
               Radius.circular(20),
             ),
           ),
-          child: ClipRRect(
-            borderRadius: BorderRadius.circular(20),
-            child: CameraPreview(cameraController),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Container(
+                width: width * 0.7,
+                child: ClipRRect(
+                  borderRadius: BorderRadius.circular(20),
+                  child: AspectRatio(
+                      aspectRatio: 1, child: CameraPreview(cameraController)),
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.only(right: 15, top: 15),
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  children: [
+                    Container(
+                      width: width * 0.1,
+                      child: IconButton(
+                        onPressed: () {
+                          if (cameraIndex == 0) {
+                            setState(() {
+                              cameraIndex = 1;
+                              startCamera();
+                            });
+                          } else if (cameraIndex == 1) {
+                            setState(() {
+                              cameraIndex = 0;
+                              startCamera();
+                            });
+                          }
+                        },
+                        icon: Icon(
+                          Icons.change_circle,
+                          color: AppColors.beige,
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ],
           ),
         ),
         SizedBox(

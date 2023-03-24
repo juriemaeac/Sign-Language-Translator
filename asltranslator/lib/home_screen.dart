@@ -167,9 +167,9 @@ class _HomeScreenState extends State<HomeScreen> {
                 alignment: Alignment.bottomCenter,
                 child: SizedBox.expand(
                   child: DraggableScrollableSheet(
-                    initialChildSize: 0.74,
-                    minChildSize: 0.16,
-                    maxChildSize: 0.74,
+                    initialChildSize: 0.15,
+                    minChildSize: 0.15,
+                    maxChildSize: 0.75,
                     builder: (BuildContext context,
                         ScrollController scrollController) {
                       return Container(
@@ -194,282 +194,281 @@ class _HomeScreenState extends State<HomeScreen> {
                                           topRight: Radius.circular(30),
                                         ),
                                       ),
-                                      child: SingleChildScrollView(
-                                        scrollDirection: Axis.vertical,
-                                        child: Padding(
-                                          padding: const EdgeInsets.all(30),
-                                          child: Column(
-                                            children: [
-                                              Row(
-                                                mainAxisAlignment:
-                                                    MainAxisAlignment
-                                                        .spaceEvenly,
-                                                children: [
-                                                  Column(
-                                                    children: [
-                                                      SizedBox(
-                                                        height: 30,
-                                                      ),
-                                                      Image(
-                                                        image: AssetImage(
-                                                          'assets/gestures/ok.png',
-                                                        ),
-                                                        width: width / 10,
-                                                      ),
-                                                    ],
-                                                  ),
-                                                  Image(
-                                                    image: AssetImage(
-                                                      'assets/gestures/i-love-you.png',
+                                      child: Padding(
+                                        padding: const EdgeInsets.symmetric(
+                                            horizontal: 30, vertical: 20),
+                                        child: Column(
+                                          children: [
+                                            Row(
+                                              mainAxisAlignment:
+                                                  MainAxisAlignment.spaceEvenly,
+                                              children: [
+                                                Column(
+                                                  children: [
+                                                    SizedBox(
+                                                      height: 30,
                                                     ),
-                                                    width: width / 10,
-                                                  ),
-                                                  Column(
-                                                    children: [
-                                                      SizedBox(
-                                                        height: 30,
+                                                    Image(
+                                                      image: AssetImage(
+                                                        'assets/gestures/ok.png',
                                                       ),
-                                                      Image(
-                                                        image: AssetImage(
-                                                          'assets/gestures/hello.png',
-                                                        ),
-                                                        width: width / 10,
-                                                      ),
-                                                    ],
-                                                  ),
-                                                  Image(
-                                                    image: AssetImage(
-                                                      'assets/gestures/letter-h.png',
+                                                      width: width / 10,
                                                     ),
-                                                    width: width / 10,
+                                                  ],
+                                                ),
+                                                Image(
+                                                  image: AssetImage(
+                                                    'assets/gestures/i-love-you.png',
                                                   ),
-                                                  Column(
-                                                    children: [
-                                                      SizedBox(
-                                                        height: 30,
+                                                  width: width / 10,
+                                                ),
+                                                Column(
+                                                  children: [
+                                                    SizedBox(
+                                                      height: 30,
+                                                    ),
+                                                    Image(
+                                                      image: AssetImage(
+                                                        'assets/gestures/hello.png',
                                                       ),
-                                                      Image(
-                                                        image: AssetImage(
-                                                          'assets/gestures/letter-r.png',
-                                                        ),
-                                                        width: width / 10,
+                                                      width: width / 10,
+                                                    ),
+                                                  ],
+                                                ),
+                                                Image(
+                                                  image: AssetImage(
+                                                    'assets/gestures/letter-h.png',
+                                                  ),
+                                                  width: width / 10,
+                                                ),
+                                                Column(
+                                                  children: [
+                                                    SizedBox(
+                                                      height: 30,
+                                                    ),
+                                                    Image(
+                                                      image: AssetImage(
+                                                        'assets/gestures/letter-r.png',
                                                       ),
-                                                    ],
-                                                  ),
-                                                ],
-                                              ),
-                                              SizedBox(
-                                                height: height * 0.03,
-                                              ),
-                                              Container(
-                                                height: height / 1.6 / 2.3,
-                                                decoration: BoxDecoration(
-                                                  color: AppColors.beige,
-                                                  borderRadius:
-                                                      const BorderRadius.all(
-                                                    Radius.circular(20),
-                                                  ),
+                                                      width: width / 10,
+                                                    ),
+                                                  ],
+                                                ),
+                                              ],
+                                            ),
+                                            SizedBox(
+                                              height: height * 0.03,
+                                            ),
+                                            Container(
+                                              height: height / 1.6 / 2.4,
+                                              decoration: BoxDecoration(
+                                                color: AppColors.beige,
+                                                borderRadius:
+                                                    const BorderRadius.all(
+                                                  Radius.circular(20),
                                                 ),
                                               ),
-                                              SizedBox(
-                                                height: height * 0.03,
-                                              ),
-                                              Row(
-                                                mainAxisAlignment:
-                                                    MainAxisAlignment
-                                                        .spaceBetween,
-                                                children: [
-                                                  GestureDetector(
-                                                    onTap: () {
-                                                      Navigator.push(
-                                                        context,
-                                                        MaterialPageRoute(
-                                                          builder: (context) =>
-                                                              BottomNavCom(),
-                                                        ),
-                                                      );
-                                                    },
-                                                    child: Container(
-                                                      padding:
-                                                          const EdgeInsets.all(
-                                                              20),
-                                                      width: width / 2 - 45,
-                                                      height: width / 2 - 45,
-                                                      decoration: BoxDecoration(
-                                                        color: AppColors.orange,
-                                                        borderRadius:
-                                                            const BorderRadius
-                                                                .all(
-                                                          Radius.circular(20),
-                                                        ),
+                                            ),
+                                            SizedBox(
+                                              height: height * 0.03,
+                                            ),
+                                            Row(
+                                              mainAxisAlignment:
+                                                  MainAxisAlignment
+                                                      .spaceBetween,
+                                              children: [
+                                                GestureDetector(
+                                                  onTap: () {
+                                                    Navigator.push(
+                                                      context,
+                                                      MaterialPageRoute(
+                                                        builder: (context) =>
+                                                            BottomNavCom(),
                                                       ),
-                                                      child: Column(
-                                                        mainAxisAlignment:
-                                                            MainAxisAlignment
-                                                                .spaceBetween,
-                                                        children: [
-                                                          SizedBox(
-                                                            height:
-                                                                height * 0.001,
-                                                          ),
-                                                          Image(
-                                                            image: AssetImage(
-                                                              'assets/icons/chat.png',
-                                                            ),
-                                                            width: width / 7,
-                                                            height: width / 7,
-                                                          ),
-                                                          ElevatedButton(
-                                                            onPressed: () {
-                                                              Navigator.push(
-                                                                context,
-                                                                MaterialPageRoute(
-                                                                  builder:
-                                                                      (context) =>
-                                                                          BottomNavCom(),
-                                                                ),
-                                                              );
-                                                            },
-                                                            style: ButtonStyle(
-                                                              padding: MaterialStateProperty.all(
-                                                                  const EdgeInsets
-                                                                          .symmetric(
-                                                                      vertical:
-                                                                          10.0,
-                                                                      horizontal:
-                                                                          15.0)),
-                                                              backgroundColor:
-                                                                  MaterialStateProperty.all<
-                                                                          Color>(
-                                                                      AppColors
-                                                                          .blue),
-                                                              shape: MaterialStateProperty
-                                                                  .all<
-                                                                      RoundedRectangleBorder>(
-                                                                RoundedRectangleBorder(
-                                                                  borderRadius:
-                                                                      BorderRadius
-                                                                          .circular(
-                                                                              10),
-                                                                ),
-                                                              ),
-                                                            ),
-                                                            child: Container(
-                                                              width: width / 2 -
-                                                                  45,
-                                                              child: FittedBox(
-                                                                fit: BoxFit
-                                                                    .fitWidth,
-                                                                child: Text(
-                                                                    'Communicate',
-                                                                    style: AppTextStyles
-                                                                        .body),
-                                                              ),
-                                                            ),
-                                                          ),
-                                                        ],
+                                                    );
+                                                  },
+                                                  child: Container(
+                                                    padding:
+                                                        const EdgeInsets.all(
+                                                            20),
+                                                    width: width / 2 - 45,
+                                                    height: width / 2 - 45,
+                                                    decoration: BoxDecoration(
+                                                      color: AppColors.orange,
+                                                      borderRadius:
+                                                          const BorderRadius
+                                                              .all(
+                                                        Radius.circular(20),
                                                       ),
                                                     ),
-                                                  ),
-                                                  SizedBox(
-                                                    width: 30,
-                                                  ),
-                                                  GestureDetector(
-                                                    onTap: () {
-                                                      Navigator.push(
-                                                        context,
-                                                        MaterialPageRoute(
-                                                          builder: (context) =>
-                                                              BottomNavAvatar(),
+                                                    child: Column(
+                                                      mainAxisAlignment:
+                                                          MainAxisAlignment
+                                                              .spaceBetween,
+                                                      children: [
+                                                        SizedBox(
+                                                          height:
+                                                              height * 0.001,
                                                         ),
-                                                      );
-                                                    },
-                                                    child: Container(
-                                                      padding:
-                                                          const EdgeInsets.all(
-                                                              20),
-                                                      width: width / 2 - 45,
-                                                      height: width / 2 - 45,
-                                                      decoration: BoxDecoration(
-                                                        color: AppColors.orange,
-                                                        borderRadius:
-                                                            const BorderRadius
-                                                                .all(
-                                                          Radius.circular(20),
+                                                        Image(
+                                                          image: AssetImage(
+                                                            'assets/icons/chat.png',
+                                                          ),
+                                                          width: width / 7,
+                                                          height: width / 7,
                                                         ),
-                                                      ),
-                                                      child: Column(
-                                                        mainAxisAlignment:
-                                                            MainAxisAlignment
-                                                                .spaceBetween,
-                                                        children: [
-                                                          SizedBox(
-                                                            height:
-                                                                height * 0.001,
-                                                          ),
-                                                          Image(
-                                                            image: AssetImage(
-                                                              'assets/icons/edit-info.png',
-                                                            ),
-                                                            width: width / 7,
-                                                            height: width / 7,
-                                                          ),
-                                                          ElevatedButton(
-                                                            onPressed: () {
-                                                              Navigator.push(
-                                                                context,
-                                                                MaterialPageRoute(
-                                                                  builder:
-                                                                      (context) =>
-                                                                          BottomNavAvatar(),
-                                                                ),
-                                                              );
-                                                            },
-                                                            style: ButtonStyle(
-                                                              padding: MaterialStateProperty.all(
-                                                                  const EdgeInsets
-                                                                          .symmetric(
-                                                                      vertical:
-                                                                          10.0,
-                                                                      horizontal:
-                                                                          15.0)),
-                                                              backgroundColor:
-                                                                  MaterialStateProperty.all<
-                                                                          Color>(
-                                                                      AppColors
-                                                                          .blue),
-                                                              shape: MaterialStateProperty
-                                                                  .all<
-                                                                      RoundedRectangleBorder>(
-                                                                RoundedRectangleBorder(
-                                                                  borderRadius:
-                                                                      BorderRadius
-                                                                          .circular(
-                                                                              10),
-                                                                ),
+                                                        ElevatedButton(
+                                                          onPressed: () {
+                                                            Navigator.push(
+                                                              context,
+                                                              MaterialPageRoute(
+                                                                builder:
+                                                                    (context) =>
+                                                                        BottomNavCom(),
                                                               ),
-                                                            ),
-                                                            child: Container(
-                                                              width: width / 2 -
-                                                                  45,
-                                                              child: FittedBox(
-                                                                fit: BoxFit
-                                                                    .fitWidth,
-                                                                child: Text(
-                                                                    'Avatar Editor',
-                                                                    style: AppTextStyles
-                                                                        .body),
+                                                            );
+                                                          },
+                                                          style: ButtonStyle(
+                                                            padding: MaterialStateProperty.all(
+                                                                const EdgeInsets
+                                                                        .symmetric(
+                                                                    vertical:
+                                                                        10.0,
+                                                                    horizontal:
+                                                                        15.0)),
+                                                            backgroundColor:
+                                                                MaterialStateProperty
+                                                                    .all<Color>(
+                                                                        AppColors
+                                                                            .blue),
+                                                            shape: MaterialStateProperty
+                                                                .all<
+                                                                    RoundedRectangleBorder>(
+                                                              RoundedRectangleBorder(
+                                                                borderRadius:
+                                                                    BorderRadius
+                                                                        .circular(
+                                                                            10),
                                                               ),
                                                             ),
                                                           ),
-                                                        ],
-                                                      ),
+                                                          child: Container(
+                                                            width:
+                                                                width / 2 - 45,
+                                                            child: FittedBox(
+                                                              fit: BoxFit
+                                                                  .fitWidth,
+                                                              child: Text(
+                                                                  'Communicate',
+                                                                  style:
+                                                                      AppTextStyles
+                                                                          .body),
+                                                            ),
+                                                          ),
+                                                        ),
+                                                      ],
                                                     ),
                                                   ),
-                                                ],
-                                              ),
-                                            ],
-                                          ),
+                                                ),
+                                                SizedBox(
+                                                  width: 30,
+                                                ),
+                                                GestureDetector(
+                                                  onTap: () {
+                                                    Navigator.push(
+                                                      context,
+                                                      MaterialPageRoute(
+                                                        builder: (context) =>
+                                                            BottomNavAvatar(),
+                                                      ),
+                                                    );
+                                                  },
+                                                  child: Container(
+                                                    padding:
+                                                        const EdgeInsets.all(
+                                                            20),
+                                                    width: width / 2 - 45,
+                                                    height: width / 2 - 45,
+                                                    decoration: BoxDecoration(
+                                                      color: AppColors.orange,
+                                                      borderRadius:
+                                                          const BorderRadius
+                                                              .all(
+                                                        Radius.circular(20),
+                                                      ),
+                                                    ),
+                                                    child: Column(
+                                                      mainAxisAlignment:
+                                                          MainAxisAlignment
+                                                              .spaceBetween,
+                                                      children: [
+                                                        SizedBox(
+                                                          height:
+                                                              height * 0.001,
+                                                        ),
+                                                        Image(
+                                                          image: AssetImage(
+                                                            'assets/icons/edit-info.png',
+                                                          ),
+                                                          width: width / 7,
+                                                          height: width / 7,
+                                                        ),
+                                                        ElevatedButton(
+                                                          onPressed: () {
+                                                            Navigator.push(
+                                                              context,
+                                                              MaterialPageRoute(
+                                                                builder:
+                                                                    (context) =>
+                                                                        BottomNavAvatar(),
+                                                              ),
+                                                            );
+                                                          },
+                                                          style: ButtonStyle(
+                                                            padding: MaterialStateProperty.all(
+                                                                const EdgeInsets
+                                                                        .symmetric(
+                                                                    vertical:
+                                                                        10.0,
+                                                                    horizontal:
+                                                                        15.0)),
+                                                            backgroundColor:
+                                                                MaterialStateProperty
+                                                                    .all<Color>(
+                                                                        AppColors
+                                                                            .blue),
+                                                            shape: MaterialStateProperty
+                                                                .all<
+                                                                    RoundedRectangleBorder>(
+                                                              RoundedRectangleBorder(
+                                                                borderRadius:
+                                                                    BorderRadius
+                                                                        .circular(
+                                                                            10),
+                                                              ),
+                                                            ),
+                                                          ),
+                                                          child: Container(
+                                                            width:
+                                                                width / 2 - 45,
+                                                            child: FittedBox(
+                                                              fit: BoxFit
+                                                                  .fitWidth,
+                                                              child: Text(
+                                                                  'Avatar Editor',
+                                                                  style:
+                                                                      AppTextStyles
+                                                                          .body),
+                                                            ),
+                                                          ),
+                                                        ),
+                                                      ],
+                                                    ),
+                                                  ),
+                                                ),
+                                              ],
+                                            ),
+                                          ],
                                         ),
                                       ),
                                     ),
