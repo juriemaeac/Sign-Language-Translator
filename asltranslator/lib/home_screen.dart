@@ -1,5 +1,6 @@
 import 'dart:ffi';
-
+import 'dart:math';
+import 'package:asltranslator/aslLibrary.dart';
 import 'package:asltranslator/calendar/calendarSection.dart';
 import 'package:asltranslator/communicate.dart';
 import 'package:asltranslator/constants.dart';
@@ -15,6 +16,49 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
+  List alphabets = [
+    'A',
+    'B',
+    'C',
+    'D',
+    'E',
+    'F',
+    'G',
+    'H',
+    'I',
+    'J',
+    'K',
+    'L',
+    'M',
+    'N',
+    'O',
+    'P',
+    'Q',
+    'R',
+    'S',
+    'T',
+    'U',
+    'V',
+    'W',
+    'X',
+    'Y',
+    'Z',
+  ];
+
+  int randIndex = 0;
+  String pickedLetter = 'A';
+
+  void randomize() {
+    randIndex = Random().nextInt(alphabets.length);
+    pickedLetter = alphabets[randIndex];
+    print("Picked Letter: " + pickedLetter);
+  }
+
+  @override
+  void initState() {
+    randomize();
+  }
+
   @override
   Widget build(BuildContext context) {
     final width = MediaQuery.of(context).size.width;
@@ -106,6 +150,7 @@ class _HomeScreenState extends State<HomeScreen> {
                               height: height * 0.02,
                             ),
                             Container(
+                              height: height / 2.6,
                               padding: const EdgeInsets.all(30),
                               decoration: const BoxDecoration(
                                 color: AppColors.blue,
@@ -113,43 +158,46 @@ class _HomeScreenState extends State<HomeScreen> {
                                   Radius.circular(20),
                                 ),
                               ),
-                              child: Column(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  Icon(
-                                    Icons.handshake_rounded,
-                                    size: 30,
-                                    color: AppColors.orange,
-                                  ),
-                                  SizedBox(
-                                    height: height * 0.02,
-                                  ),
-                                  Container(
-                                    width: width,
-                                    child: FittedBox(
-                                      fit: BoxFit.fitWidth,
-                                      child: Text(
-                                          'Communicate with Deaf and Mute',
-                                          style: AppTextStyles.headings),
+                              child: SingleChildScrollView(
+                                scrollDirection: Axis.vertical,
+                                child: Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    Icon(
+                                      Icons.handshake_rounded,
+                                      size: 30,
+                                      color: AppColors.orange,
                                     ),
-                                  ),
-                                  SizedBox(
-                                    height: height * 0.03,
-                                  ),
-                                  Text(
-                                      'Lorem ipsum dolor sit amet, Lorem ipsum dolor sit amet, Lorem ipsum dolor sit amet, Lorem ipsum dolor sit amet, Lorem ipsum dolor sit amet, Lorem ipsum dolor sit amet, Lorem ipsum dolor sit amet,',
-                                      textAlign: TextAlign.justify,
-                                      style: AppTextStyles.body
-                                          .copyWith(fontSize: 15)),
-                                  SizedBox(
-                                    height: height * 0.03,
-                                  ),
-                                  Text(
-                                      'Lorem ipsum dolor sit amet, Lorem ipsum dolor sit amet, Lorem ipsum dolor sit amet, Lorem ipsum dolor sit amet, Lorem ipsum dolor sit amet, Lorem ipsum dolor sit amet, Lorem ipsum dolor sit amet,',
-                                      textAlign: TextAlign.justify,
-                                      style: AppTextStyles.body
-                                          .copyWith(fontSize: 15)),
-                                ],
+                                    SizedBox(
+                                      height: height * 0.02,
+                                    ),
+                                    Container(
+                                      width: width,
+                                      child: FittedBox(
+                                        fit: BoxFit.fitWidth,
+                                        child: Text(
+                                            'Communicate with Deaf and Mute',
+                                            style: AppTextStyles.headings),
+                                      ),
+                                    ),
+                                    SizedBox(
+                                      height: height * 0.03,
+                                    ),
+                                    Text(
+                                        'The CADATE (Communication App for Deaf and Mute) is a mobile application that can assist hearing, deaf, and mute people in breaking down communication barriers. CADATE enables hearing, deaf, and mute people by giving a platform where they can communicate and understand each other. ',
+                                        textAlign: TextAlign.justify,
+                                        style: AppTextStyles.body
+                                            .copyWith(fontSize: 15)),
+                                    SizedBox(
+                                      height: height * 0.03,
+                                    ),
+                                    Text(
+                                        'This is a platform where they can express themselves freely with the unavailability of internet connection and costs nothing for everyone to use.',
+                                        textAlign: TextAlign.justify,
+                                        style: AppTextStyles.body
+                                            .copyWith(fontSize: 15)),
+                                  ],
+                                ),
                               ),
                             ),
                           ],
@@ -157,11 +205,15 @@ class _HomeScreenState extends State<HomeScreen> {
                       ),
                     ],
                   ),
-                  Container(
-                    color: AppColors.blue,
-                    height: height * 0.05,
-                  ),
                 ],
+              ),
+              Align(
+                alignment: Alignment.bottomCenter,
+                child: Container(
+                  width: width,
+                  height: height * 0.05,
+                  color: AppColors.blue,
+                ),
               ),
               Align(
                 alignment: Alignment.bottomCenter,
@@ -169,11 +221,11 @@ class _HomeScreenState extends State<HomeScreen> {
                   child: DraggableScrollableSheet(
                     initialChildSize: 0.15,
                     minChildSize: 0.15,
-                    maxChildSize: 0.75,
+                    maxChildSize: 0.73,
                     builder: (BuildContext context,
                         ScrollController scrollController) {
                       return Container(
-                        height: height / 1.6,
+                        height: height / 1.57,
                         child: ListView.builder(
                           controller: scrollController,
                           itemCount: 1,
@@ -186,7 +238,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                     Container(
                                       //margin: const EdgeInsets.only(top: 5),
                                       width: width,
-                                      height: height / 1.6,
+                                      height: height / 1.57,
                                       decoration: const BoxDecoration(
                                         color: AppColors.blue,
                                         borderRadius: BorderRadius.only(
@@ -260,7 +312,10 @@ class _HomeScreenState extends State<HomeScreen> {
                                               height: height * 0.03,
                                             ),
                                             Container(
+                                              padding: const EdgeInsets.only(
+                                                  top: 10, bottom: 20),
                                               height: height / 1.6 / 2.4,
+                                              width: width,
                                               decoration: BoxDecoration(
                                                 color: AppColors.beige,
                                                 borderRadius:
@@ -268,9 +323,101 @@ class _HomeScreenState extends State<HomeScreen> {
                                                   Radius.circular(20),
                                                 ),
                                               ),
+                                              child: Column(
+                                                mainAxisAlignment:
+                                                    MainAxisAlignment
+                                                        .spaceBetween,
+                                                children: [
+                                                  Row(
+                                                    mainAxisAlignment:
+                                                        MainAxisAlignment
+                                                            .spaceBetween,
+                                                    children: [
+                                                      Padding(
+                                                        padding:
+                                                            const EdgeInsets
+                                                                .only(left: 20),
+                                                        child: Text(
+                                                          'Alphabet Randomizer',
+                                                          style: AppTextStyles
+                                                              .title
+                                                              .copyWith(
+                                                                  fontSize: 20,
+                                                                  fontWeight:
+                                                                      FontWeight
+                                                                          .bold),
+                                                        ),
+                                                      ),
+                                                      IconButton(
+                                                          onPressed: () {
+                                                            setState(() {
+                                                              randomize();
+                                                              print(
+                                                                  'clicked button pickedLetter: $pickedLetter');
+                                                            });
+                                                          },
+                                                          icon: Icon(
+                                                            Icons
+                                                                .replay_rounded,
+                                                            color:
+                                                                AppColors.blue,
+                                                            size: 20,
+                                                          )),
+                                                    ],
+                                                  ),
+                                                  Stack(
+                                                    children: [
+                                                      Container(
+                                                        margin: const EdgeInsets
+                                                                .symmetric(
+                                                            horizontal: 20),
+                                                        height: height / 5.8,
+                                                        child: ClipRRect(
+                                                          borderRadius:
+                                                              const BorderRadius
+                                                                  .all(
+                                                            Radius.circular(20),
+                                                          ),
+                                                          child: Image(
+                                                            image: AssetImage(
+                                                              'assets/aslAlphabet/$pickedLetter.gif',
+                                                            ),
+                                                            width: width - 40,
+                                                            fit: BoxFit.cover,
+                                                          ),
+                                                        ),
+                                                      ),
+                                                      Align(
+                                                        alignment:
+                                                            Alignment.topRight,
+                                                        child: Padding(
+                                                          padding:
+                                                              const EdgeInsets
+                                                                      .only(
+                                                                  top: 20,
+                                                                  right: 40),
+                                                          child: Text(
+                                                            pickedLetter,
+                                                            style: AppTextStyles
+                                                                .headings
+                                                                .copyWith(
+                                                                    fontWeight:
+                                                                        FontWeight
+                                                                            .w800,
+                                                                    fontSize:
+                                                                        30,
+                                                                    color: AppColors
+                                                                        .orange),
+                                                          ),
+                                                        ),
+                                                      ),
+                                                    ],
+                                                  ),
+                                                ],
+                                              ),
                                             ),
                                             SizedBox(
-                                              height: height * 0.03,
+                                              height: height * 0.04,
                                             ),
                                             Row(
                                               mainAxisAlignment:
@@ -300,6 +447,16 @@ class _HomeScreenState extends State<HomeScreen> {
                                                               .all(
                                                         Radius.circular(20),
                                                       ),
+                                                      boxShadow: [
+                                                        BoxShadow(
+                                                          color: Color.fromARGB(
+                                                                  255, 0, 0, 0)
+                                                              .withOpacity(0.1),
+                                                          spreadRadius: 5,
+                                                          blurRadius: 8,
+                                                          //offset: Offset(0, 3),
+                                                        ),
+                                                      ],
                                                     ),
                                                     child: Column(
                                                       mainAxisAlignment:
@@ -353,17 +510,15 @@ class _HomeScreenState extends State<HomeScreen> {
                                                             ),
                                                           ),
                                                           child: Container(
+                                                            alignment: Alignment
+                                                                .center,
                                                             width:
                                                                 width / 2 - 45,
-                                                            child: FittedBox(
-                                                              fit: BoxFit
-                                                                  .fitWidth,
-                                                              child: Text(
-                                                                  'Communicate',
-                                                                  style:
-                                                                      AppTextStyles
-                                                                          .body),
-                                                            ),
+                                                            child: Text(
+                                                                'Communicate',
+                                                                style:
+                                                                    AppTextStyles
+                                                                        .body),
                                                           ),
                                                         ),
                                                       ],
@@ -379,7 +534,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                                       context,
                                                       MaterialPageRoute(
                                                         builder: (context) =>
-                                                            BottomNavAvatar(),
+                                                            ASLLibrary(),
                                                       ),
                                                     );
                                                   },
@@ -396,6 +551,16 @@ class _HomeScreenState extends State<HomeScreen> {
                                                               .all(
                                                         Radius.circular(20),
                                                       ),
+                                                      boxShadow: [
+                                                        BoxShadow(
+                                                          color: Color.fromARGB(
+                                                                  255, 0, 0, 0)
+                                                              .withOpacity(0.1),
+                                                          spreadRadius: 5,
+                                                          blurRadius: 8,
+                                                          //offset: Offset(0, 3),
+                                                        ),
+                                                      ],
                                                     ),
                                                     child: Column(
                                                       mainAxisAlignment:
@@ -406,13 +571,20 @@ class _HomeScreenState extends State<HomeScreen> {
                                                           height:
                                                               height * 0.001,
                                                         ),
-                                                        Image(
-                                                          image: AssetImage(
-                                                            'assets/icons/edit-info.png',
-                                                          ),
-                                                          width: width / 7,
-                                                          height: width / 7,
+                                                        Icon(
+                                                          Icons
+                                                              .sign_language_rounded,
+                                                          color:
+                                                              AppColors.beige,
+                                                          size: width / 7,
                                                         ),
+                                                        // Image(
+                                                        //   image: AssetImage(
+                                                        //     'assets/icons/edit-info.png',
+                                                        //   ),
+                                                        //   width: width / 7,
+                                                        //   height: width / 7,
+                                                        // ),
                                                         ElevatedButton(
                                                           onPressed: () {
                                                             Navigator.push(
@@ -420,7 +592,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                                               MaterialPageRoute(
                                                                 builder:
                                                                     (context) =>
-                                                                        BottomNavAvatar(),
+                                                                        ASLLibrary(),
                                                               ),
                                                             );
                                                           },
@@ -449,17 +621,15 @@ class _HomeScreenState extends State<HomeScreen> {
                                                             ),
                                                           ),
                                                           child: Container(
+                                                            alignment: Alignment
+                                                                .center,
                                                             width:
                                                                 width / 2 - 45,
-                                                            child: FittedBox(
-                                                              fit: BoxFit
-                                                                  .fitWidth,
-                                                              child: Text(
-                                                                  'Avatar Editor',
-                                                                  style:
-                                                                      AppTextStyles
-                                                                          .body),
-                                                            ),
+                                                            child: Text(
+                                                                'ASL Library',
+                                                                style:
+                                                                    AppTextStyles
+                                                                        .body),
                                                           ),
                                                         ),
                                                       ],

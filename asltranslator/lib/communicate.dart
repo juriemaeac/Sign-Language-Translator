@@ -26,35 +26,61 @@ class _CommunicateScreenState extends State<CommunicateScreen> {
   var isListening = false;
   bool isRecognized = false;
   bool isASL = true;
+  String confidence = "";
+  // List<String> aslLabels = [
+  //   '0 yes',
+  //   '1 no',
+  //   '2 thanks',
+  //   '3 welcome',
+  //   '4 emergency',
+  //   '5 hello',
+  //   '6 sorry',
+  //   '7 imfine',
+  //   '8 iloveyou',
+  //   '9 help',
+  // ];
+
+  // List<String> aslWordsNew = [
+  //   'Yes',
+  //   'No',
+  //   'Thank you',
+  //   'Welcome',
+  //   'Emergency',
+  //   'Hello',
+  //   'Sorry',
+  //   "I'm fine",
+  //   'I love you',
+  //   'Help',
+  // ];
 
   List<String> aslLabels = [
-    '0 yes',
-    '1 no',
-    '2 thanks',
-    '3 welcome',
-    '4 emergency',
-    '5 hello',
-    '6 sorry',
-    '7 imfine',
-    '8 iloveyou',
-    '9 help',
+    '0 thanks',
+    '1 welcome',
+    '2 emergency',
+    '3 hello',
+    '4 sorry',
+    '5 imfine',
+    '6 help',
+    '7 dontwant',
+    '8 okay',
+    '9 drink',
   ];
 
   List<String> aslWordsNew = [
-    'Yes',
-    'No',
     'Thank you',
     'Welcome',
     'Emergency',
     'Hello',
     'Sorry',
     "I'm fine",
-    'I love you',
     'Help',
+    "Don't want",
+    'Okay',
+    'Drink',
   ];
   ////////////////////////////////////////////////////////////////////////////////
   FlutterTts flutterTts = FlutterTts();
-  String textvoice = "Waiting for A S L Word";
+  String textvoice = "Scanning for A S L Word";
   ////////////////////////////////////////////////////////////////////////////////
   //late List<CameraDescription> cameras;
   late CameraController cameraController;
@@ -72,7 +98,7 @@ class _CommunicateScreenState extends State<CommunicateScreen> {
   void startCamera() async {
     cameras = await availableCameras();
     cameraController = CameraController(
-        cameras![cameraIndex], ResolutionPreset.medium,
+        cameras![cameraIndex], ResolutionPreset.low,
         enableAudio: false);
     await cameraController.initialize().then((value) {
       if (!mounted) {
@@ -112,9 +138,19 @@ class _CommunicateScreenState extends State<CommunicateScreen> {
 
           String modelResponse = response['label'];
           if (aslLabels.contains(modelResponse)) {
+            double confidenceValue = response['confidence'];
+            double confidenceDecimal =
+                confidenceValue - confidenceValue.toInt();
+            List<String> confidenceArray =
+                confidenceDecimal.toStringAsFixed(4).split("");
+            String confidenceOutput =
+                "${confidenceArray[2]}${confidenceArray[3]}.${confidenceArray[4]}${confidenceArray[5]}";
+            //confidence = double.parse(confidenceOutput);
+            confidence = confidenceOutput;
+
             int index = aslLabels.indexOf(modelResponse);
             String parsedWord = aslWordsNew[index];
-            print("Recognized Word: " + parsedWord);
+            print("Recognized Word: $parsedWord Confidence: $confidence");
             output = parsedWord;
             textvoice = parsedWord;
           }
@@ -150,7 +186,7 @@ class _CommunicateScreenState extends State<CommunicateScreen> {
           scrollDirection: Axis.vertical,
           child: Container(
               padding: const EdgeInsets.all(30),
-              height: height - 80,
+              height: height - 100,
               width: width,
               color: AppColors.beige,
               child: Column(
@@ -241,7 +277,7 @@ class _CommunicateScreenState extends State<CommunicateScreen> {
       children: [
         Container(
           width: width,
-          height: height * 0.32,
+          height: height * 0.3,
           child: Stack(
             children: [
               Container(
@@ -260,15 +296,18 @@ class _CommunicateScreenState extends State<CommunicateScreen> {
                   textAlign: TextAlign.center,
                   decoration: InputDecoration(
                       hintText: hintText,
-                      hintStyle: AppTextStyles.title,
+                      hintStyle: AppTextStyles.title.copyWith(fontSize: 20),
                       border: InputBorder.none,
                       hintMaxLines: 3),
-                  style: AppTextStyles.title,
+                  style: AppTextStyles.title.copyWith(fontSize: 20),
                   onChanged: (value) {
                     setState(() {
                       //var lowerCaseValue = value.toLowerCase();
                       var capitalizedValue =
                           toBeginningOfSentenceCase(value) ?? "";
+                      // if (capitalizedValue == "Ok") {
+                      //   capitalizedValue == "Okay";
+                      // }
                       if (aslWordsNew.contains(value)) {
                         voicetext = capitalizedValue;
                         print("Recognized Type Word: " + value);
@@ -310,6 +349,9 @@ class _CommunicateScreenState extends State<CommunicateScreen> {
                                   var speechResult = toBeginningOfSentenceCase(
                                           result.recognizedWords) ??
                                       "";
+                                  if (result.recognizedWords == "Ok") {
+                                    result.recognizedWords == "Okay";
+                                  }
                                   if (aslWordsNew.contains(speechResult)) {
                                     print("Recognized Voice Word: " +
                                         result.recognizedWords);
@@ -360,7 +402,7 @@ class _CommunicateScreenState extends State<CommunicateScreen> {
         ),
         Container(
           margin: const EdgeInsets.only(bottom: 20),
-          height: height * 0.32,
+          height: height * 0.3,
           width: width,
           decoration: BoxDecoration(
             color: AppColors.orange,
@@ -377,10 +419,20 @@ class _CommunicateScreenState extends State<CommunicateScreen> {
                   ))
               : Center(
                   child: Text(
-                    'No ASL Word Found',
-                    style: AppTextStyles.title,
+                    'ASL Not Found',
+                    style: AppTextStyles.title.copyWith(fontSize: 20),
                   ),
                 ),
+        ),
+        SizedBox(
+          height: height * 0.01,
+        ),
+        Center(
+          child: Text('Sign Language Resource Provided by SigningSavvy.',
+              style: TextStyle(
+                  color: Colors.grey,
+                  fontSize: 12,
+                  fontWeight: FontWeight.w400)),
         ),
       ],
     );
@@ -471,9 +523,28 @@ class _CommunicateScreenState extends State<CommunicateScreen> {
                     Radius.circular(20),
                   ),
                 ),
-                child: Text(
-                  output,
-                  style: AppTextStyles.title,
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                    Text(
+                      output,
+                      style: AppTextStyles.title.copyWith(fontSize: 25),
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        const Icon(Icons.memory_rounded,
+                            size: 15, color: AppColors.beige),
+                        SizedBox(
+                          width: 10,
+                        ),
+                        Text("Prediction Confidence: $confidence %",
+                            style: AppTextStyles.title.copyWith(
+                                fontSize: 15, color: AppColors.beige)),
+                      ],
+                    ),
+                  ],
                 ),
               ),
               Align(
