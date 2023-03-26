@@ -219,9 +219,9 @@ class _HomeScreenState extends State<HomeScreen> {
                 alignment: Alignment.bottomCenter,
                 child: SizedBox.expand(
                   child: DraggableScrollableSheet(
-                    initialChildSize: 0.15,
-                    minChildSize: 0.15,
-                    maxChildSize: 0.73,
+                    initialChildSize: 0.145,
+                    minChildSize: 0.145,
+                    maxChildSize: 0.75,
                     builder: (BuildContext context,
                         ScrollController scrollController) {
                       return Container(
@@ -248,7 +248,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                       ),
                                       child: Padding(
                                         padding: const EdgeInsets.symmetric(
-                                            horizontal: 30, vertical: 20),
+                                            horizontal: 30, vertical: 15),
                                         child: Column(
                                           children: [
                                             Row(
@@ -309,12 +309,12 @@ class _HomeScreenState extends State<HomeScreen> {
                                               ],
                                             ),
                                             SizedBox(
-                                              height: height * 0.03,
+                                              height: height * 0.034,
                                             ),
                                             Container(
                                               padding: const EdgeInsets.only(
                                                   top: 10, bottom: 20),
-                                              height: height / 1.6 / 2.4,
+                                              height: height / 1.5 / 2.4,
                                               width: width,
                                               decoration: BoxDecoration(
                                                 color: AppColors.beige,
@@ -371,7 +371,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                                         margin: const EdgeInsets
                                                                 .symmetric(
                                                             horizontal: 20),
-                                                        height: height / 5.8,
+                                                        height: height / 6,
                                                         child: ClipRRect(
                                                           borderRadius:
                                                               const BorderRadius
@@ -380,7 +380,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                                           ),
                                                           child: Image(
                                                             image: AssetImage(
-                                                              'assets/aslAlphabet/$pickedLetter.gif',
+                                                              'assets/aslSamples/$pickedLetter.gif',
                                                             ),
                                                             width: width - 40,
                                                             fit: BoxFit.cover,
@@ -417,7 +417,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                               ),
                                             ),
                                             SizedBox(
-                                              height: height * 0.04,
+                                              height: height * 0.026,
                                             ),
                                             Row(
                                               mainAxisAlignment:
@@ -437,9 +437,9 @@ class _HomeScreenState extends State<HomeScreen> {
                                                   child: Container(
                                                     padding:
                                                         const EdgeInsets.all(
-                                                            20),
+                                                            15),
                                                     width: width / 2 - 45,
-                                                    height: width / 2 - 45,
+                                                    height: height / 5.7,
                                                     decoration: BoxDecoration(
                                                       color: AppColors.orange,
                                                       borderRadius:
@@ -471,8 +471,8 @@ class _HomeScreenState extends State<HomeScreen> {
                                                           image: AssetImage(
                                                             'assets/icons/chat.png',
                                                           ),
-                                                          width: width / 7,
-                                                          height: width / 7,
+                                                          width: width / 8,
+                                                          height: width / 8,
                                                         ),
                                                         ElevatedButton(
                                                           onPressed: () {
@@ -492,7 +492,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                                                     vertical:
                                                                         10.0,
                                                                     horizontal:
-                                                                        15.0)),
+                                                                        10.0)),
                                                             backgroundColor:
                                                                 MaterialStateProperty
                                                                     .all<Color>(
@@ -541,9 +541,9 @@ class _HomeScreenState extends State<HomeScreen> {
                                                   child: Container(
                                                     padding:
                                                         const EdgeInsets.all(
-                                                            20),
+                                                            15),
                                                     width: width / 2 - 45,
-                                                    height: width / 2 - 45,
+                                                    height: height / 5.7,
                                                     decoration: BoxDecoration(
                                                       color: AppColors.orange,
                                                       borderRadius:
@@ -576,7 +576,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                                               .sign_language_rounded,
                                                           color:
                                                               AppColors.beige,
-                                                          size: width / 7,
+                                                          size: width / 8,
                                                         ),
                                                         // Image(
                                                         //   image: AssetImage(
@@ -603,7 +603,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                                                     vertical:
                                                                         10.0,
                                                                     horizontal:
-                                                                        15.0)),
+                                                                        10.0)),
                                                             backgroundColor:
                                                                 MaterialStateProperty
                                                                     .all<Color>(

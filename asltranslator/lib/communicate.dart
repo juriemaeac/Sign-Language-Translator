@@ -277,7 +277,7 @@ class _CommunicateScreenState extends State<CommunicateScreen> {
       children: [
         Container(
           width: width,
-          height: height * 0.3,
+          height: height * 0.28,
           child: Stack(
             children: [
               Container(
@@ -296,10 +296,10 @@ class _CommunicateScreenState extends State<CommunicateScreen> {
                   textAlign: TextAlign.center,
                   decoration: InputDecoration(
                       hintText: hintText,
-                      hintStyle: AppTextStyles.title.copyWith(fontSize: 20),
+                      hintStyle: AppTextStyles.title.copyWith(fontSize: 18),
                       border: InputBorder.none,
                       hintMaxLines: 3),
-                  style: AppTextStyles.title.copyWith(fontSize: 20),
+                  style: AppTextStyles.title.copyWith(fontSize: 18),
                   onChanged: (value) {
                     setState(() {
                       //var lowerCaseValue = value.toLowerCase();
@@ -385,7 +385,7 @@ class _CommunicateScreenState extends State<CommunicateScreen> {
                     },
                     child: CircleAvatar(
                       backgroundColor: AppColors.blue,
-                      radius: 30,
+                      radius: 25,
                       child: Icon(
                         isListening ? Icons.mic : Icons.mic_none,
                         color: AppColors.beige,
@@ -402,7 +402,7 @@ class _CommunicateScreenState extends State<CommunicateScreen> {
         ),
         Container(
           margin: const EdgeInsets.only(bottom: 20),
-          height: height * 0.3,
+          height: height * 0.28,
           width: width,
           decoration: BoxDecoration(
             color: AppColors.orange,
@@ -419,8 +419,8 @@ class _CommunicateScreenState extends State<CommunicateScreen> {
                   ))
               : Center(
                   child: Text(
-                    'ASL Not Found',
-                    style: AppTextStyles.title.copyWith(fontSize: 20),
+                    'ASL Not Available',
+                    style: AppTextStyles.title.copyWith(fontSize: 18),
                   ),
                 ),
         ),
@@ -509,14 +509,14 @@ class _CommunicateScreenState extends State<CommunicateScreen> {
         ),
         Container(
           width: width,
-          height: height * 0.32,
+          height: height * 0.3,
           child: Stack(
             children: [
               Container(
                 padding: const EdgeInsets.all(30),
                 alignment: Alignment.center,
                 width: width,
-                height: height * 0.32,
+                height: height * 0.3,
                 decoration: BoxDecoration(
                   color: AppColors.orange,
                   borderRadius: BorderRadius.all(
@@ -553,7 +553,7 @@ class _CommunicateScreenState extends State<CommunicateScreen> {
                   margin: const EdgeInsets.only(bottom: 30, right: 30),
                   child: CircleAvatar(
                     backgroundColor: AppColors.blue,
-                    radius: 30,
+                    radius: 25,
                     child: IconButton(
                       onPressed: () {
                         speak(textvoice);

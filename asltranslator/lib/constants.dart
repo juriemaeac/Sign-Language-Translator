@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class AppColors {
+  static const Color extraBlue = Color(0xFF20273A);
   static const Color blue = Color(0xFF1A4555); //Color(0xFF20273A);
   static const Color lightblue = Color(0xFF232B41);
   static const Color lightlightblue = Color(0xFF28314C);

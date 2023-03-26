@@ -43,6 +43,16 @@ class _ASLLibraryState extends State<ASLLibrary> {
   Color _containerColorX = AppColors.orange;
   Color _containerColorY = AppColors.orange;
   Color _containerColorZ = AppColors.orange;
+  Color _containerColorOk = AppColors.orange;
+  Color _containerColorDontwant = AppColors.orange;
+  Color _containerColorHelp = AppColors.orange;
+  Color _containerColorSorry = AppColors.orange;
+  Color _containerColorThankyou = AppColors.orange;
+  Color _containerColorWelcome = AppColors.orange;
+  Color _containerColorDrink = AppColors.orange;
+  Color _containerColorHello = AppColors.orange;
+  Color _containerColorImfine = AppColors.orange;
+  Color _containerColorEmergency = AppColors.orange;
 
   Color textColorA = AppColors.blue;
   Color textColorB = AppColors.blue;
@@ -70,6 +80,16 @@ class _ASLLibraryState extends State<ASLLibrary> {
   Color textColorX = AppColors.blue;
   Color textColorY = AppColors.blue;
   Color textColorZ = AppColors.blue;
+  Color textColorOk = AppColors.blue;
+  Color textColorDontwant = AppColors.blue;
+  Color textColorHelp = AppColors.blue;
+  Color textColorSorry = AppColors.blue;
+  Color textColorThankyou = AppColors.blue;
+  Color textColorWelcome = AppColors.blue;
+  Color textColorDrink = AppColors.blue;
+  Color textColorHello = AppColors.blue;
+  Color textColorImfine = AppColors.blue;
+  Color textColorEmergency = AppColors.blue;
 
   bool isTappedA = false;
   bool isTappedB = false;
@@ -97,6 +117,16 @@ class _ASLLibraryState extends State<ASLLibrary> {
   bool isTappedX = false;
   bool isTappedY = false;
   bool isTappedZ = false;
+  bool isTappedOk = false;
+  bool isTappedDontwant = false;
+  bool isTappedHelp = false;
+  bool isTappedSorry = false;
+  bool isTappedThankyou = false;
+  bool isTappedWelcome = false;
+  bool isTappedDrink = false;
+  bool isTappedHello = false;
+  bool isTappedImfine = false;
+  bool isTappedEmergency = false;
 
   @override
   Widget build(BuildContext context) {
@@ -207,6 +237,16 @@ class _ASLLibraryState extends State<ASLLibrary> {
                               isTappedX = false;
                               isTappedY = false;
                               isTappedZ = false;
+                              isTappedOk = false;
+                              isTappedDontwant = false;
+                              isTappedHelp = false;
+                              isTappedSorry = false;
+                              isTappedThankyou = false;
+                              isTappedWelcome = false;
+                              isTappedDrink = false;
+                              isTappedHello = false;
+                              isTappedImfine = false;
+                              isTappedEmergency = false;
 
                               _containerColorA =
                                   isTappedA ? AppColors.blue : AppColors.orange;
@@ -235,6 +275,16 @@ class _ASLLibraryState extends State<ASLLibrary> {
                               _containerColorX = AppColors.orange;
                               _containerColorY = AppColors.orange;
                               _containerColorZ = AppColors.orange;
+                              _containerColorOk = AppColors.orange;
+                              _containerColorDontwant = AppColors.orange;
+                              _containerColorHelp = AppColors.orange;
+                              _containerColorSorry = AppColors.orange;
+                              _containerColorThankyou = AppColors.orange;
+                              _containerColorWelcome = AppColors.orange;
+                              _containerColorDrink = AppColors.orange;
+                              _containerColorHello = AppColors.orange;
+                              _containerColorImfine = AppColors.orange;
+                              _containerColorEmergency = AppColors.orange;
 
                               textColorA =
                                   isTappedA ? AppColors.orange : AppColors.blue;
@@ -263,6 +313,16 @@ class _ASLLibraryState extends State<ASLLibrary> {
                               textColorX = AppColors.blue;
                               textColorY = AppColors.blue;
                               textColorZ = AppColors.blue;
+                              textColorOk = AppColors.blue;
+                              textColorDontwant = AppColors.blue;
+                              textColorHelp = AppColors.blue;
+                              textColorSorry = AppColors.blue;
+                              textColorThankyou = AppColors.blue;
+                              textColorWelcome = AppColors.blue;
+                              textColorDrink = AppColors.blue;
+                              textColorHello = AppColors.blue;
+                              textColorImfine = AppColors.blue;
+                              textColorEmergency = AppColors.blue;
 
                               speak('A');
                             });
@@ -302,6 +362,16 @@ class _ASLLibraryState extends State<ASLLibrary> {
                               isTappedX = false;
                               isTappedY = false;
                               isTappedZ = false;
+                              isTappedOk = false;
+                              isTappedDontwant = false;
+                              isTappedHelp = false;
+                              isTappedSorry = false;
+                              isTappedThankyou = false;
+                              isTappedWelcome = false;
+                              isTappedDrink = false;
+                              isTappedHello = false;
+                              isTappedImfine = false;
+                              isTappedEmergency = false;
                               _containerColorB =
                                   isTappedB ? AppColors.blue : AppColors.orange;
                               _containerColorA = AppColors.orange;
@@ -329,6 +399,16 @@ class _ASLLibraryState extends State<ASLLibrary> {
                               _containerColorX = AppColors.orange;
                               _containerColorY = AppColors.orange;
                               _containerColorZ = AppColors.orange;
+                              _containerColorOk = AppColors.orange;
+                              _containerColorDontwant = AppColors.orange;
+                              _containerColorHelp = AppColors.orange;
+                              _containerColorSorry = AppColors.orange;
+                              _containerColorThankyou = AppColors.orange;
+                              _containerColorWelcome = AppColors.orange;
+                              _containerColorDrink = AppColors.orange;
+                              _containerColorHello = AppColors.orange;
+                              _containerColorImfine = AppColors.orange;
+                              _containerColorEmergency = AppColors.orange;
 
                               textColorB =
                                   isTappedB ? AppColors.orange : AppColors.blue;
@@ -357,6 +437,16 @@ class _ASLLibraryState extends State<ASLLibrary> {
                               textColorX = AppColors.blue;
                               textColorY = AppColors.blue;
                               textColorZ = AppColors.blue;
+                              textColorOk = AppColors.blue;
+                              textColorDontwant = AppColors.blue;
+                              textColorHelp = AppColors.blue;
+                              textColorSorry = AppColors.blue;
+                              textColorThankyou = AppColors.blue;
+                              textColorWelcome = AppColors.blue;
+                              textColorDrink = AppColors.blue;
+                              textColorHello = AppColors.blue;
+                              textColorImfine = AppColors.blue;
+                              textColorEmergency = AppColors.blue;
 
                               speak('B');
                             });
@@ -396,6 +486,17 @@ class _ASLLibraryState extends State<ASLLibrary> {
                               isTappedX = false;
                               isTappedY = false;
                               isTappedZ = false;
+                              isTappedOk = false;
+                              isTappedDontwant = false;
+                              isTappedHelp = false;
+                              isTappedSorry = false;
+                              isTappedThankyou = false;
+                              isTappedWelcome = false;
+                              isTappedDrink = false;
+                              isTappedHello = false;
+                              isTappedImfine = false;
+                              isTappedEmergency = false;
+
                               _containerColorC =
                                   isTappedC ? AppColors.blue : AppColors.orange;
                               _containerColorA = AppColors.orange;
@@ -423,6 +524,16 @@ class _ASLLibraryState extends State<ASLLibrary> {
                               _containerColorX = AppColors.orange;
                               _containerColorY = AppColors.orange;
                               _containerColorZ = AppColors.orange;
+                              _containerColorOk = AppColors.orange;
+                              _containerColorDontwant = AppColors.orange;
+                              _containerColorHelp = AppColors.orange;
+                              _containerColorSorry = AppColors.orange;
+                              _containerColorThankyou = AppColors.orange;
+                              _containerColorWelcome = AppColors.orange;
+                              _containerColorDrink = AppColors.orange;
+                              _containerColorHello = AppColors.orange;
+                              _containerColorImfine = AppColors.orange;
+                              _containerColorEmergency = AppColors.orange;
 
                               textColorC =
                                   isTappedC ? AppColors.orange : AppColors.blue;
@@ -451,6 +562,16 @@ class _ASLLibraryState extends State<ASLLibrary> {
                               textColorX = AppColors.blue;
                               textColorY = AppColors.blue;
                               textColorZ = AppColors.blue;
+                              textColorOk = AppColors.blue;
+                              textColorDontwant = AppColors.blue;
+                              textColorHelp = AppColors.blue;
+                              textColorSorry = AppColors.blue;
+                              textColorThankyou = AppColors.blue;
+                              textColorWelcome = AppColors.blue;
+                              textColorDrink = AppColors.blue;
+                              textColorHello = AppColors.blue;
+                              textColorImfine = AppColors.blue;
+                              textColorEmergency = AppColors.blue;
 
                               speak('C');
                             });
@@ -490,6 +611,17 @@ class _ASLLibraryState extends State<ASLLibrary> {
                               isTappedX = false;
                               isTappedY = false;
                               isTappedZ = false;
+                              isTappedOk = false;
+                              isTappedDontwant = false;
+                              isTappedHelp = false;
+                              isTappedSorry = false;
+                              isTappedThankyou = false;
+                              isTappedWelcome = false;
+                              isTappedDrink = false;
+                              isTappedHello = false;
+                              isTappedImfine = false;
+                              isTappedEmergency = false;
+
                               _containerColorD =
                                   isTappedD ? AppColors.blue : AppColors.orange;
                               _containerColorA = AppColors.orange;
@@ -517,6 +649,16 @@ class _ASLLibraryState extends State<ASLLibrary> {
                               _containerColorX = AppColors.orange;
                               _containerColorY = AppColors.orange;
                               _containerColorZ = AppColors.orange;
+                              _containerColorOk = AppColors.orange;
+                              _containerColorDontwant = AppColors.orange;
+                              _containerColorHelp = AppColors.orange;
+                              _containerColorSorry = AppColors.orange;
+                              _containerColorThankyou = AppColors.orange;
+                              _containerColorWelcome = AppColors.orange;
+                              _containerColorDrink = AppColors.orange;
+                              _containerColorHello = AppColors.orange;
+                              _containerColorImfine = AppColors.orange;
+                              _containerColorEmergency = AppColors.orange;
 
                               textColorD =
                                   isTappedD ? AppColors.orange : AppColors.blue;
@@ -545,6 +687,16 @@ class _ASLLibraryState extends State<ASLLibrary> {
                               textColorX = AppColors.blue;
                               textColorY = AppColors.blue;
                               textColorZ = AppColors.blue;
+                              textColorOk = AppColors.blue;
+                              textColorDontwant = AppColors.blue;
+                              textColorHelp = AppColors.blue;
+                              textColorSorry = AppColors.blue;
+                              textColorThankyou = AppColors.blue;
+                              textColorWelcome = AppColors.blue;
+                              textColorDrink = AppColors.blue;
+                              textColorHello = AppColors.blue;
+                              textColorImfine = AppColors.blue;
+                              textColorEmergency = AppColors.blue;
 
                               speak('D');
                             });
@@ -584,6 +736,17 @@ class _ASLLibraryState extends State<ASLLibrary> {
                               isTappedX = false;
                               isTappedY = false;
                               isTappedZ = false;
+                              isTappedOk = false;
+                              isTappedDontwant = false;
+                              isTappedHelp = false;
+                              isTappedSorry = false;
+                              isTappedThankyou = false;
+                              isTappedWelcome = false;
+                              isTappedDrink = false;
+                              isTappedHello = false;
+                              isTappedImfine = false;
+                              isTappedEmergency = false;
+
                               _containerColorE =
                                   isTappedE ? AppColors.blue : AppColors.orange;
                               _containerColorA = AppColors.orange;
@@ -611,6 +774,16 @@ class _ASLLibraryState extends State<ASLLibrary> {
                               _containerColorX = AppColors.orange;
                               _containerColorY = AppColors.orange;
                               _containerColorZ = AppColors.orange;
+                              _containerColorOk = AppColors.orange;
+                              _containerColorDontwant = AppColors.orange;
+                              _containerColorHelp = AppColors.orange;
+                              _containerColorSorry = AppColors.orange;
+                              _containerColorThankyou = AppColors.orange;
+                              _containerColorWelcome = AppColors.orange;
+                              _containerColorDrink = AppColors.orange;
+                              _containerColorHello = AppColors.orange;
+                              _containerColorImfine = AppColors.orange;
+                              _containerColorEmergency = AppColors.orange;
 
                               textColorE =
                                   isTappedE ? AppColors.orange : AppColors.blue;
@@ -639,6 +812,16 @@ class _ASLLibraryState extends State<ASLLibrary> {
                               textColorX = AppColors.blue;
                               textColorY = AppColors.blue;
                               textColorZ = AppColors.blue;
+                              textColorOk = AppColors.blue;
+                              textColorDontwant = AppColors.blue;
+                              textColorHelp = AppColors.blue;
+                              textColorSorry = AppColors.blue;
+                              textColorThankyou = AppColors.blue;
+                              textColorWelcome = AppColors.blue;
+                              textColorDrink = AppColors.blue;
+                              textColorHello = AppColors.blue;
+                              textColorImfine = AppColors.blue;
+                              textColorEmergency = AppColors.blue;
 
                               speak('E');
                             });
@@ -678,6 +861,17 @@ class _ASLLibraryState extends State<ASLLibrary> {
                               isTappedX = false;
                               isTappedY = false;
                               isTappedZ = false;
+                              isTappedOk = false;
+                              isTappedDontwant = false;
+                              isTappedHelp = false;
+                              isTappedSorry = false;
+                              isTappedThankyou = false;
+                              isTappedWelcome = false;
+                              isTappedDrink = false;
+                              isTappedHello = false;
+                              isTappedImfine = false;
+                              isTappedEmergency = false;
+
                               _containerColorF =
                                   isTappedF ? AppColors.blue : AppColors.orange;
                               _containerColorA = AppColors.orange;
@@ -705,6 +899,16 @@ class _ASLLibraryState extends State<ASLLibrary> {
                               _containerColorX = AppColors.orange;
                               _containerColorY = AppColors.orange;
                               _containerColorZ = AppColors.orange;
+                              _containerColorOk = AppColors.orange;
+                              _containerColorDontwant = AppColors.orange;
+                              _containerColorHelp = AppColors.orange;
+                              _containerColorSorry = AppColors.orange;
+                              _containerColorThankyou = AppColors.orange;
+                              _containerColorWelcome = AppColors.orange;
+                              _containerColorDrink = AppColors.orange;
+                              _containerColorHello = AppColors.orange;
+                              _containerColorImfine = AppColors.orange;
+                              _containerColorEmergency = AppColors.orange;
 
                               textColorF =
                                   isTappedF ? AppColors.orange : AppColors.blue;
@@ -734,6 +938,16 @@ class _ASLLibraryState extends State<ASLLibrary> {
                               textColorX = AppColors.blue;
                               textColorY = AppColors.blue;
                               textColorZ = AppColors.blue;
+                              textColorOk = AppColors.blue;
+                              textColorDontwant = AppColors.blue;
+                              textColorHelp = AppColors.blue;
+                              textColorSorry = AppColors.blue;
+                              textColorThankyou = AppColors.blue;
+                              textColorWelcome = AppColors.blue;
+                              textColorDrink = AppColors.blue;
+                              textColorHello = AppColors.blue;
+                              textColorImfine = AppColors.blue;
+                              textColorEmergency = AppColors.blue;
 
                               speak('F');
                             });
@@ -773,6 +987,17 @@ class _ASLLibraryState extends State<ASLLibrary> {
                               isTappedX = false;
                               isTappedY = false;
                               isTappedZ = false;
+                              isTappedOk = false;
+                              isTappedDontwant = false;
+                              isTappedHelp = false;
+                              isTappedSorry = false;
+                              isTappedThankyou = false;
+                              isTappedWelcome = false;
+                              isTappedDrink = false;
+                              isTappedHello = false;
+                              isTappedImfine = false;
+                              isTappedEmergency = false;
+
                               _containerColorG =
                                   isTappedG ? AppColors.blue : AppColors.orange;
                               _containerColorA = AppColors.orange;
@@ -800,6 +1025,16 @@ class _ASLLibraryState extends State<ASLLibrary> {
                               _containerColorX = AppColors.orange;
                               _containerColorY = AppColors.orange;
                               _containerColorZ = AppColors.orange;
+                              _containerColorOk = AppColors.orange;
+                              _containerColorDontwant = AppColors.orange;
+                              _containerColorHelp = AppColors.orange;
+                              _containerColorSorry = AppColors.orange;
+                              _containerColorThankyou = AppColors.orange;
+                              _containerColorWelcome = AppColors.orange;
+                              _containerColorDrink = AppColors.orange;
+                              _containerColorHello = AppColors.orange;
+                              _containerColorImfine = AppColors.orange;
+                              _containerColorEmergency = AppColors.orange;
 
                               textColorG =
                                   isTappedG ? AppColors.orange : AppColors.blue;
@@ -829,6 +1064,16 @@ class _ASLLibraryState extends State<ASLLibrary> {
                               textColorX = AppColors.blue;
                               textColorY = AppColors.blue;
                               textColorZ = AppColors.blue;
+                              textColorOk = AppColors.blue;
+                              textColorDontwant = AppColors.blue;
+                              textColorHelp = AppColors.blue;
+                              textColorSorry = AppColors.blue;
+                              textColorThankyou = AppColors.blue;
+                              textColorWelcome = AppColors.blue;
+                              textColorDrink = AppColors.blue;
+                              textColorHello = AppColors.blue;
+                              textColorImfine = AppColors.blue;
+                              textColorEmergency = AppColors.blue;
 
                               speak('G');
                             });
@@ -868,6 +1113,17 @@ class _ASLLibraryState extends State<ASLLibrary> {
                               isTappedX = false;
                               isTappedY = false;
                               isTappedZ = false;
+                              isTappedOk = false;
+                              isTappedDontwant = false;
+                              isTappedHelp = false;
+                              isTappedSorry = false;
+                              isTappedThankyou = false;
+                              isTappedWelcome = false;
+                              isTappedDrink = false;
+                              isTappedHello = false;
+                              isTappedImfine = false;
+                              isTappedEmergency = false;
+
                               _containerColorH =
                                   isTappedH ? AppColors.blue : AppColors.orange;
                               _containerColorA = AppColors.orange;
@@ -895,6 +1151,16 @@ class _ASLLibraryState extends State<ASLLibrary> {
                               _containerColorX = AppColors.orange;
                               _containerColorY = AppColors.orange;
                               _containerColorZ = AppColors.orange;
+                              _containerColorOk = AppColors.orange;
+                              _containerColorDontwant = AppColors.orange;
+                              _containerColorHelp = AppColors.orange;
+                              _containerColorSorry = AppColors.orange;
+                              _containerColorThankyou = AppColors.orange;
+                              _containerColorWelcome = AppColors.orange;
+                              _containerColorDrink = AppColors.orange;
+                              _containerColorHello = AppColors.orange;
+                              _containerColorImfine = AppColors.orange;
+                              _containerColorEmergency = AppColors.orange;
 
                               textColorH =
                                   isTappedH ? AppColors.orange : AppColors.blue;
@@ -923,6 +1189,16 @@ class _ASLLibraryState extends State<ASLLibrary> {
                               textColorX = AppColors.blue;
                               textColorY = AppColors.blue;
                               textColorZ = AppColors.blue;
+                              textColorOk = AppColors.blue;
+                              textColorDontwant = AppColors.blue;
+                              textColorHelp = AppColors.blue;
+                              textColorSorry = AppColors.blue;
+                              textColorThankyou = AppColors.blue;
+                              textColorWelcome = AppColors.blue;
+                              textColorDrink = AppColors.blue;
+                              textColorHello = AppColors.blue;
+                              textColorImfine = AppColors.blue;
+                              textColorEmergency = AppColors.blue;
 
                               speak('H');
                             });
@@ -962,6 +1238,17 @@ class _ASLLibraryState extends State<ASLLibrary> {
                               isTappedX = false;
                               isTappedY = false;
                               isTappedZ = false;
+                              isTappedOk = false;
+                              isTappedDontwant = false;
+                              isTappedHelp = false;
+                              isTappedSorry = false;
+                              isTappedThankyou = false;
+                              isTappedWelcome = false;
+                              isTappedDrink = false;
+                              isTappedHello = false;
+                              isTappedImfine = false;
+                              isTappedEmergency = false;
+
                               _containerColorI =
                                   isTappedI ? AppColors.blue : AppColors.orange;
                               _containerColorA = AppColors.orange;
@@ -989,6 +1276,16 @@ class _ASLLibraryState extends State<ASLLibrary> {
                               _containerColorX = AppColors.orange;
                               _containerColorY = AppColors.orange;
                               _containerColorZ = AppColors.orange;
+                              _containerColorOk = AppColors.orange;
+                              _containerColorDontwant = AppColors.orange;
+                              _containerColorHelp = AppColors.orange;
+                              _containerColorSorry = AppColors.orange;
+                              _containerColorThankyou = AppColors.orange;
+                              _containerColorWelcome = AppColors.orange;
+                              _containerColorDrink = AppColors.orange;
+                              _containerColorHello = AppColors.orange;
+                              _containerColorImfine = AppColors.orange;
+                              _containerColorEmergency = AppColors.orange;
 
                               textColorI =
                                   isTappedI ? AppColors.orange : AppColors.blue;
@@ -1017,6 +1314,16 @@ class _ASLLibraryState extends State<ASLLibrary> {
                               textColorX = AppColors.blue;
                               textColorY = AppColors.blue;
                               textColorZ = AppColors.blue;
+                              textColorOk = AppColors.blue;
+                              textColorDontwant = AppColors.blue;
+                              textColorHelp = AppColors.blue;
+                              textColorSorry = AppColors.blue;
+                              textColorThankyou = AppColors.blue;
+                              textColorWelcome = AppColors.blue;
+                              textColorDrink = AppColors.blue;
+                              textColorHello = AppColors.blue;
+                              textColorImfine = AppColors.blue;
+                              textColorEmergency = AppColors.blue;
 
                               speak('I');
                             });
@@ -1056,6 +1363,17 @@ class _ASLLibraryState extends State<ASLLibrary> {
                               isTappedX = false;
                               isTappedY = false;
                               isTappedZ = false;
+                              isTappedOk = false;
+                              isTappedDontwant = false;
+                              isTappedHelp = false;
+                              isTappedSorry = false;
+                              isTappedThankyou = false;
+                              isTappedWelcome = false;
+                              isTappedDrink = false;
+                              isTappedHello = false;
+                              isTappedImfine = false;
+                              isTappedEmergency = false;
+
                               _containerColorJ =
                                   isTappedJ ? AppColors.blue : AppColors.orange;
                               _containerColorA = AppColors.orange;
@@ -1083,6 +1401,16 @@ class _ASLLibraryState extends State<ASLLibrary> {
                               _containerColorX = AppColors.orange;
                               _containerColorY = AppColors.orange;
                               _containerColorZ = AppColors.orange;
+                              _containerColorOk = AppColors.orange;
+                              _containerColorDontwant = AppColors.orange;
+                              _containerColorHelp = AppColors.orange;
+                              _containerColorSorry = AppColors.orange;
+                              _containerColorThankyou = AppColors.orange;
+                              _containerColorWelcome = AppColors.orange;
+                              _containerColorDrink = AppColors.orange;
+                              _containerColorHello = AppColors.orange;
+                              _containerColorImfine = AppColors.orange;
+                              _containerColorEmergency = AppColors.orange;
 
                               textColorJ =
                                   isTappedJ ? AppColors.orange : AppColors.blue;
@@ -1111,6 +1439,16 @@ class _ASLLibraryState extends State<ASLLibrary> {
                               textColorX = AppColors.blue;
                               textColorY = AppColors.blue;
                               textColorZ = AppColors.blue;
+                              textColorOk = AppColors.blue;
+                              textColorDontwant = AppColors.blue;
+                              textColorHelp = AppColors.blue;
+                              textColorSorry = AppColors.blue;
+                              textColorThankyou = AppColors.blue;
+                              textColorWelcome = AppColors.blue;
+                              textColorDrink = AppColors.blue;
+                              textColorHello = AppColors.blue;
+                              textColorImfine = AppColors.blue;
+                              textColorEmergency = AppColors.blue;
 
                               speak('J');
                             });
@@ -1150,6 +1488,17 @@ class _ASLLibraryState extends State<ASLLibrary> {
                               isTappedX = false;
                               isTappedY = false;
                               isTappedZ = false;
+                              isTappedOk = false;
+                              isTappedDontwant = false;
+                              isTappedHelp = false;
+                              isTappedSorry = false;
+                              isTappedThankyou = false;
+                              isTappedWelcome = false;
+                              isTappedDrink = false;
+                              isTappedHello = false;
+                              isTappedImfine = false;
+                              isTappedEmergency = false;
+
                               _containerColorK =
                                   isTappedK ? AppColors.blue : AppColors.orange;
                               _containerColorA = AppColors.orange;
@@ -1177,6 +1526,16 @@ class _ASLLibraryState extends State<ASLLibrary> {
                               _containerColorX = AppColors.orange;
                               _containerColorY = AppColors.orange;
                               _containerColorZ = AppColors.orange;
+                              _containerColorOk = AppColors.orange;
+                              _containerColorDontwant = AppColors.orange;
+                              _containerColorHelp = AppColors.orange;
+                              _containerColorSorry = AppColors.orange;
+                              _containerColorThankyou = AppColors.orange;
+                              _containerColorWelcome = AppColors.orange;
+                              _containerColorDrink = AppColors.orange;
+                              _containerColorHello = AppColors.orange;
+                              _containerColorImfine = AppColors.orange;
+                              _containerColorEmergency = AppColors.orange;
 
                               textColorK =
                                   isTappedK ? AppColors.orange : AppColors.blue;
@@ -1205,6 +1564,16 @@ class _ASLLibraryState extends State<ASLLibrary> {
                               textColorX = AppColors.blue;
                               textColorY = AppColors.blue;
                               textColorZ = AppColors.blue;
+                              textColorOk = AppColors.blue;
+                              textColorDontwant = AppColors.blue;
+                              textColorHelp = AppColors.blue;
+                              textColorSorry = AppColors.blue;
+                              textColorThankyou = AppColors.blue;
+                              textColorWelcome = AppColors.blue;
+                              textColorDrink = AppColors.blue;
+                              textColorHello = AppColors.blue;
+                              textColorImfine = AppColors.blue;
+                              textColorEmergency = AppColors.blue;
 
                               speak('K');
                             });
@@ -1244,6 +1613,16 @@ class _ASLLibraryState extends State<ASLLibrary> {
                               isTappedX = false;
                               isTappedY = false;
                               isTappedZ = false;
+                              isTappedOk = false;
+                              isTappedDontwant = false;
+                              isTappedHelp = false;
+                              isTappedSorry = false;
+                              isTappedThankyou = false;
+                              isTappedWelcome = false;
+                              isTappedDrink = false;
+                              isTappedHello = false;
+                              isTappedImfine = false;
+                              isTappedEmergency = false;
                               _containerColorL =
                                   isTappedL ? AppColors.blue : AppColors.orange;
                               _containerColorA = AppColors.orange;
@@ -1271,6 +1650,16 @@ class _ASLLibraryState extends State<ASLLibrary> {
                               _containerColorX = AppColors.orange;
                               _containerColorY = AppColors.orange;
                               _containerColorZ = AppColors.orange;
+                              _containerColorOk = AppColors.orange;
+                              _containerColorDontwant = AppColors.orange;
+                              _containerColorHelp = AppColors.orange;
+                              _containerColorSorry = AppColors.orange;
+                              _containerColorThankyou = AppColors.orange;
+                              _containerColorWelcome = AppColors.orange;
+                              _containerColorDrink = AppColors.orange;
+                              _containerColorHello = AppColors.orange;
+                              _containerColorImfine = AppColors.orange;
+                              _containerColorEmergency = AppColors.orange;
 
                               textColorL =
                                   isTappedL ? AppColors.orange : AppColors.blue;
@@ -1299,6 +1688,16 @@ class _ASLLibraryState extends State<ASLLibrary> {
                               textColorX = AppColors.blue;
                               textColorY = AppColors.blue;
                               textColorZ = AppColors.blue;
+                              textColorOk = AppColors.blue;
+                              textColorDontwant = AppColors.blue;
+                              textColorHelp = AppColors.blue;
+                              textColorSorry = AppColors.blue;
+                              textColorThankyou = AppColors.blue;
+                              textColorWelcome = AppColors.blue;
+                              textColorDrink = AppColors.blue;
+                              textColorHello = AppColors.blue;
+                              textColorImfine = AppColors.blue;
+                              textColorEmergency = AppColors.blue;
 
                               speak('L');
                             });
@@ -1338,6 +1737,17 @@ class _ASLLibraryState extends State<ASLLibrary> {
                               isTappedX = false;
                               isTappedY = false;
                               isTappedZ = false;
+                              isTappedOk = false;
+                              isTappedDontwant = false;
+                              isTappedHelp = false;
+                              isTappedSorry = false;
+                              isTappedThankyou = false;
+                              isTappedWelcome = false;
+                              isTappedDrink = false;
+                              isTappedHello = false;
+                              isTappedImfine = false;
+                              isTappedEmergency = false;
+
                               _containerColorM =
                                   isTappedM ? AppColors.blue : AppColors.orange;
                               _containerColorA = AppColors.orange;
@@ -1365,6 +1775,16 @@ class _ASLLibraryState extends State<ASLLibrary> {
                               _containerColorX = AppColors.orange;
                               _containerColorY = AppColors.orange;
                               _containerColorZ = AppColors.orange;
+                              _containerColorOk = AppColors.orange;
+                              _containerColorDontwant = AppColors.orange;
+                              _containerColorHelp = AppColors.orange;
+                              _containerColorSorry = AppColors.orange;
+                              _containerColorThankyou = AppColors.orange;
+                              _containerColorWelcome = AppColors.orange;
+                              _containerColorDrink = AppColors.orange;
+                              _containerColorHello = AppColors.orange;
+                              _containerColorImfine = AppColors.orange;
+                              _containerColorEmergency = AppColors.orange;
 
                               textColorM =
                                   isTappedM ? AppColors.orange : AppColors.blue;
@@ -1393,6 +1813,16 @@ class _ASLLibraryState extends State<ASLLibrary> {
                               textColorX = AppColors.blue;
                               textColorY = AppColors.blue;
                               textColorZ = AppColors.blue;
+                              textColorOk = AppColors.blue;
+                              textColorDontwant = AppColors.blue;
+                              textColorHelp = AppColors.blue;
+                              textColorSorry = AppColors.blue;
+                              textColorThankyou = AppColors.blue;
+                              textColorWelcome = AppColors.blue;
+                              textColorDrink = AppColors.blue;
+                              textColorHello = AppColors.blue;
+                              textColorImfine = AppColors.blue;
+                              textColorEmergency = AppColors.blue;
 
                               speak('M');
                             });
@@ -1432,6 +1862,17 @@ class _ASLLibraryState extends State<ASLLibrary> {
                               isTappedX = false;
                               isTappedY = false;
                               isTappedZ = false;
+                              isTappedOk = false;
+                              isTappedDontwant = false;
+                              isTappedHelp = false;
+                              isTappedSorry = false;
+                              isTappedThankyou = false;
+                              isTappedWelcome = false;
+                              isTappedDrink = false;
+                              isTappedHello = false;
+                              isTappedImfine = false;
+                              isTappedEmergency = false;
+
                               _containerColorN =
                                   isTappedN ? AppColors.blue : AppColors.orange;
                               _containerColorA = AppColors.orange;
@@ -1459,6 +1900,16 @@ class _ASLLibraryState extends State<ASLLibrary> {
                               _containerColorX = AppColors.orange;
                               _containerColorY = AppColors.orange;
                               _containerColorZ = AppColors.orange;
+                              _containerColorOk = AppColors.orange;
+                              _containerColorDontwant = AppColors.orange;
+                              _containerColorHelp = AppColors.orange;
+                              _containerColorSorry = AppColors.orange;
+                              _containerColorThankyou = AppColors.orange;
+                              _containerColorWelcome = AppColors.orange;
+                              _containerColorDrink = AppColors.orange;
+                              _containerColorHello = AppColors.orange;
+                              _containerColorImfine = AppColors.orange;
+                              _containerColorEmergency = AppColors.orange;
 
                               textColorN =
                                   isTappedN ? AppColors.orange : AppColors.blue;
@@ -1487,6 +1938,16 @@ class _ASLLibraryState extends State<ASLLibrary> {
                               textColorX = AppColors.blue;
                               textColorY = AppColors.blue;
                               textColorZ = AppColors.blue;
+                              textColorOk = AppColors.blue;
+                              textColorDontwant = AppColors.blue;
+                              textColorHelp = AppColors.blue;
+                              textColorSorry = AppColors.blue;
+                              textColorThankyou = AppColors.blue;
+                              textColorWelcome = AppColors.blue;
+                              textColorDrink = AppColors.blue;
+                              textColorHello = AppColors.blue;
+                              textColorImfine = AppColors.blue;
+                              textColorEmergency = AppColors.blue;
 
                               speak('N');
                             });
@@ -1526,6 +1987,16 @@ class _ASLLibraryState extends State<ASLLibrary> {
                               isTappedX = false;
                               isTappedY = false;
                               isTappedZ = false;
+                              isTappedOk = false;
+                              isTappedDontwant = false;
+                              isTappedHelp = false;
+                              isTappedSorry = false;
+                              isTappedThankyou = false;
+                              isTappedWelcome = false;
+                              isTappedDrink = false;
+                              isTappedHello = false;
+                              isTappedImfine = false;
+                              isTappedEmergency = false;
                               _containerColorO =
                                   isTappedO ? AppColors.blue : AppColors.orange;
                               _containerColorA = AppColors.orange;
@@ -1553,6 +2024,16 @@ class _ASLLibraryState extends State<ASLLibrary> {
                               _containerColorX = AppColors.orange;
                               _containerColorY = AppColors.orange;
                               _containerColorZ = AppColors.orange;
+                              _containerColorOk = AppColors.orange;
+                              _containerColorDontwant = AppColors.orange;
+                              _containerColorHelp = AppColors.orange;
+                              _containerColorSorry = AppColors.orange;
+                              _containerColorThankyou = AppColors.orange;
+                              _containerColorWelcome = AppColors.orange;
+                              _containerColorDrink = AppColors.orange;
+                              _containerColorHello = AppColors.orange;
+                              _containerColorImfine = AppColors.orange;
+                              _containerColorEmergency = AppColors.orange;
 
                               textColorO =
                                   isTappedO ? AppColors.orange : AppColors.blue;
@@ -1581,6 +2062,16 @@ class _ASLLibraryState extends State<ASLLibrary> {
                               textColorX = AppColors.blue;
                               textColorY = AppColors.blue;
                               textColorZ = AppColors.blue;
+                              textColorOk = AppColors.blue;
+                              textColorDontwant = AppColors.blue;
+                              textColorHelp = AppColors.blue;
+                              textColorSorry = AppColors.blue;
+                              textColorThankyou = AppColors.blue;
+                              textColorWelcome = AppColors.blue;
+                              textColorDrink = AppColors.blue;
+                              textColorHello = AppColors.blue;
+                              textColorImfine = AppColors.blue;
+                              textColorEmergency = AppColors.blue;
                               speak('O');
                             });
                           }),
@@ -1619,6 +2110,16 @@ class _ASLLibraryState extends State<ASLLibrary> {
                               isTappedX = false;
                               isTappedY = false;
                               isTappedZ = false;
+                              isTappedOk = false;
+                              isTappedDontwant = false;
+                              isTappedHelp = false;
+                              isTappedSorry = false;
+                              isTappedThankyou = false;
+                              isTappedWelcome = false;
+                              isTappedDrink = false;
+                              isTappedHello = false;
+                              isTappedImfine = false;
+                              isTappedEmergency = false;
                               _containerColorP =
                                   isTappedP ? AppColors.blue : AppColors.orange;
                               _containerColorA = AppColors.orange;
@@ -1646,6 +2147,16 @@ class _ASLLibraryState extends State<ASLLibrary> {
                               _containerColorX = AppColors.orange;
                               _containerColorY = AppColors.orange;
                               _containerColorZ = AppColors.orange;
+                              _containerColorOk = AppColors.orange;
+                              _containerColorDontwant = AppColors.orange;
+                              _containerColorHelp = AppColors.orange;
+                              _containerColorSorry = AppColors.orange;
+                              _containerColorThankyou = AppColors.orange;
+                              _containerColorWelcome = AppColors.orange;
+                              _containerColorDrink = AppColors.orange;
+                              _containerColorHello = AppColors.orange;
+                              _containerColorImfine = AppColors.orange;
+                              _containerColorEmergency = AppColors.orange;
                               textColorP =
                                   isTappedP ? AppColors.orange : AppColors.blue;
                               textColorA = AppColors.blue;
@@ -1673,6 +2184,16 @@ class _ASLLibraryState extends State<ASLLibrary> {
                               textColorX = AppColors.blue;
                               textColorY = AppColors.blue;
                               textColorZ = AppColors.blue;
+                              textColorOk = AppColors.blue;
+                              textColorDontwant = AppColors.blue;
+                              textColorHelp = AppColors.blue;
+                              textColorSorry = AppColors.blue;
+                              textColorThankyou = AppColors.blue;
+                              textColorWelcome = AppColors.blue;
+                              textColorDrink = AppColors.blue;
+                              textColorHello = AppColors.blue;
+                              textColorImfine = AppColors.blue;
+                              textColorEmergency = AppColors.blue;
                               speak('P');
                             });
                           }),
@@ -1711,6 +2232,16 @@ class _ASLLibraryState extends State<ASLLibrary> {
                               isTappedX = false;
                               isTappedY = false;
                               isTappedZ = false;
+                              isTappedOk = false;
+                              isTappedDontwant = false;
+                              isTappedHelp = false;
+                              isTappedSorry = false;
+                              isTappedThankyou = false;
+                              isTappedWelcome = false;
+                              isTappedDrink = false;
+                              isTappedHello = false;
+                              isTappedImfine = false;
+                              isTappedEmergency = false;
                               _containerColorQ =
                                   isTappedQ ? AppColors.blue : AppColors.orange;
                               _containerColorA = AppColors.orange;
@@ -1738,6 +2269,16 @@ class _ASLLibraryState extends State<ASLLibrary> {
                               _containerColorX = AppColors.orange;
                               _containerColorY = AppColors.orange;
                               _containerColorZ = AppColors.orange;
+                              _containerColorOk = AppColors.orange;
+                              _containerColorDontwant = AppColors.orange;
+                              _containerColorHelp = AppColors.orange;
+                              _containerColorSorry = AppColors.orange;
+                              _containerColorThankyou = AppColors.orange;
+                              _containerColorWelcome = AppColors.orange;
+                              _containerColorDrink = AppColors.orange;
+                              _containerColorHello = AppColors.orange;
+                              _containerColorImfine = AppColors.orange;
+                              _containerColorEmergency = AppColors.orange;
                               textColorQ =
                                   isTappedQ ? AppColors.orange : AppColors.blue;
                               textColorA = AppColors.blue;
@@ -1765,6 +2306,16 @@ class _ASLLibraryState extends State<ASLLibrary> {
                               textColorX = AppColors.blue;
                               textColorY = AppColors.blue;
                               textColorZ = AppColors.blue;
+                              textColorOk = AppColors.blue;
+                              textColorDontwant = AppColors.blue;
+                              textColorHelp = AppColors.blue;
+                              textColorSorry = AppColors.blue;
+                              textColorThankyou = AppColors.blue;
+                              textColorWelcome = AppColors.blue;
+                              textColorDrink = AppColors.blue;
+                              textColorHello = AppColors.blue;
+                              textColorImfine = AppColors.blue;
+                              textColorEmergency = AppColors.blue;
                               speak('Q');
                             });
                           }),
@@ -1803,6 +2354,16 @@ class _ASLLibraryState extends State<ASLLibrary> {
                               isTappedX = false;
                               isTappedY = false;
                               isTappedZ = false;
+                              isTappedOk = false;
+                              isTappedDontwant = false;
+                              isTappedHelp = false;
+                              isTappedSorry = false;
+                              isTappedThankyou = false;
+                              isTappedWelcome = false;
+                              isTappedDrink = false;
+                              isTappedHello = false;
+                              isTappedImfine = false;
+                              isTappedEmergency = false;
                               _containerColorR =
                                   isTappedR ? AppColors.blue : AppColors.orange;
                               _containerColorA = AppColors.orange;
@@ -1830,6 +2391,16 @@ class _ASLLibraryState extends State<ASLLibrary> {
                               _containerColorX = AppColors.orange;
                               _containerColorY = AppColors.orange;
                               _containerColorZ = AppColors.orange;
+                              _containerColorOk = AppColors.orange;
+                              _containerColorDontwant = AppColors.orange;
+                              _containerColorHelp = AppColors.orange;
+                              _containerColorSorry = AppColors.orange;
+                              _containerColorThankyou = AppColors.orange;
+                              _containerColorWelcome = AppColors.orange;
+                              _containerColorDrink = AppColors.orange;
+                              _containerColorHello = AppColors.orange;
+                              _containerColorImfine = AppColors.orange;
+                              _containerColorEmergency = AppColors.orange;
                               textColorR =
                                   isTappedR ? AppColors.orange : AppColors.blue;
                               textColorA = AppColors.blue;
@@ -1857,6 +2428,16 @@ class _ASLLibraryState extends State<ASLLibrary> {
                               textColorX = AppColors.blue;
                               textColorY = AppColors.blue;
                               textColorZ = AppColors.blue;
+                              textColorOk = AppColors.blue;
+                              textColorDontwant = AppColors.blue;
+                              textColorHelp = AppColors.blue;
+                              textColorSorry = AppColors.blue;
+                              textColorThankyou = AppColors.blue;
+                              textColorWelcome = AppColors.blue;
+                              textColorDrink = AppColors.blue;
+                              textColorHello = AppColors.blue;
+                              textColorImfine = AppColors.blue;
+                              textColorEmergency = AppColors.blue;
 
                               speak('R');
                             });
@@ -1896,6 +2477,16 @@ class _ASLLibraryState extends State<ASLLibrary> {
                               isTappedX = false;
                               isTappedY = false;
                               isTappedZ = false;
+                              isTappedOk = false;
+                              isTappedDontwant = false;
+                              isTappedHelp = false;
+                              isTappedSorry = false;
+                              isTappedThankyou = false;
+                              isTappedWelcome = false;
+                              isTappedDrink = false;
+                              isTappedHello = false;
+                              isTappedImfine = false;
+                              isTappedEmergency = false;
                               _containerColorS =
                                   isTappedS ? AppColors.blue : AppColors.orange;
                               _containerColorA = AppColors.orange;
@@ -1923,6 +2514,16 @@ class _ASLLibraryState extends State<ASLLibrary> {
                               _containerColorX = AppColors.orange;
                               _containerColorY = AppColors.orange;
                               _containerColorZ = AppColors.orange;
+                              _containerColorOk = AppColors.orange;
+                              _containerColorDontwant = AppColors.orange;
+                              _containerColorHelp = AppColors.orange;
+                              _containerColorSorry = AppColors.orange;
+                              _containerColorThankyou = AppColors.orange;
+                              _containerColorWelcome = AppColors.orange;
+                              _containerColorDrink = AppColors.orange;
+                              _containerColorHello = AppColors.orange;
+                              _containerColorImfine = AppColors.orange;
+                              _containerColorEmergency = AppColors.orange;
                               textColorS =
                                   isTappedS ? AppColors.orange : AppColors.blue;
                               textColorA = AppColors.blue;
@@ -1950,6 +2551,16 @@ class _ASLLibraryState extends State<ASLLibrary> {
                               textColorX = AppColors.blue;
                               textColorY = AppColors.blue;
                               textColorZ = AppColors.blue;
+                              textColorOk = AppColors.blue;
+                              textColorDontwant = AppColors.blue;
+                              textColorHelp = AppColors.blue;
+                              textColorSorry = AppColors.blue;
+                              textColorThankyou = AppColors.blue;
+                              textColorWelcome = AppColors.blue;
+                              textColorDrink = AppColors.blue;
+                              textColorHello = AppColors.blue;
+                              textColorImfine = AppColors.blue;
+                              textColorEmergency = AppColors.blue;
 
                               speak('S');
                             });
@@ -1989,6 +2600,16 @@ class _ASLLibraryState extends State<ASLLibrary> {
                               isTappedX = false;
                               isTappedY = false;
                               isTappedZ = false;
+                              isTappedOk = false;
+                              isTappedDontwant = false;
+                              isTappedHelp = false;
+                              isTappedSorry = false;
+                              isTappedThankyou = false;
+                              isTappedWelcome = false;
+                              isTappedDrink = false;
+                              isTappedHello = false;
+                              isTappedImfine = false;
+                              isTappedEmergency = false;
                               _containerColorT =
                                   isTappedT ? AppColors.blue : AppColors.orange;
                               _containerColorA = AppColors.orange;
@@ -2016,6 +2637,16 @@ class _ASLLibraryState extends State<ASLLibrary> {
                               _containerColorX = AppColors.orange;
                               _containerColorY = AppColors.orange;
                               _containerColorZ = AppColors.orange;
+                              _containerColorOk = AppColors.orange;
+                              _containerColorDontwant = AppColors.orange;
+                              _containerColorHelp = AppColors.orange;
+                              _containerColorSorry = AppColors.orange;
+                              _containerColorThankyou = AppColors.orange;
+                              _containerColorWelcome = AppColors.orange;
+                              _containerColorDrink = AppColors.orange;
+                              _containerColorHello = AppColors.orange;
+                              _containerColorImfine = AppColors.orange;
+                              _containerColorEmergency = AppColors.orange;
                               textColorT =
                                   isTappedT ? AppColors.orange : AppColors.blue;
                               textColorA = AppColors.blue;
@@ -2043,6 +2674,16 @@ class _ASLLibraryState extends State<ASLLibrary> {
                               textColorX = AppColors.blue;
                               textColorY = AppColors.blue;
                               textColorZ = AppColors.blue;
+                              textColorOk = AppColors.blue;
+                              textColorDontwant = AppColors.blue;
+                              textColorHelp = AppColors.blue;
+                              textColorSorry = AppColors.blue;
+                              textColorThankyou = AppColors.blue;
+                              textColorWelcome = AppColors.blue;
+                              textColorDrink = AppColors.blue;
+                              textColorHello = AppColors.blue;
+                              textColorImfine = AppColors.blue;
+                              textColorEmergency = AppColors.blue;
 
                               speak('T');
                             });
@@ -2082,6 +2723,16 @@ class _ASLLibraryState extends State<ASLLibrary> {
                               isTappedX = false;
                               isTappedY = false;
                               isTappedZ = false;
+                              isTappedOk = false;
+                              isTappedDontwant = false;
+                              isTappedHelp = false;
+                              isTappedSorry = false;
+                              isTappedThankyou = false;
+                              isTappedWelcome = false;
+                              isTappedDrink = false;
+                              isTappedHello = false;
+                              isTappedImfine = false;
+                              isTappedEmergency = false;
                               _containerColorU =
                                   isTappedU ? AppColors.blue : AppColors.orange;
                               _containerColorA = AppColors.orange;
@@ -2109,6 +2760,16 @@ class _ASLLibraryState extends State<ASLLibrary> {
                               _containerColorX = AppColors.orange;
                               _containerColorY = AppColors.orange;
                               _containerColorZ = AppColors.orange;
+                              _containerColorOk = AppColors.orange;
+                              _containerColorDontwant = AppColors.orange;
+                              _containerColorHelp = AppColors.orange;
+                              _containerColorSorry = AppColors.orange;
+                              _containerColorThankyou = AppColors.orange;
+                              _containerColorWelcome = AppColors.orange;
+                              _containerColorDrink = AppColors.orange;
+                              _containerColorHello = AppColors.orange;
+                              _containerColorImfine = AppColors.orange;
+                              _containerColorEmergency = AppColors.orange;
                               textColorU =
                                   isTappedU ? AppColors.orange : AppColors.blue;
                               textColorA = AppColors.blue;
@@ -2136,6 +2797,16 @@ class _ASLLibraryState extends State<ASLLibrary> {
                               textColorX = AppColors.blue;
                               textColorY = AppColors.blue;
                               textColorZ = AppColors.blue;
+                              textColorOk = AppColors.blue;
+                              textColorDontwant = AppColors.blue;
+                              textColorHelp = AppColors.blue;
+                              textColorSorry = AppColors.blue;
+                              textColorThankyou = AppColors.blue;
+                              textColorWelcome = AppColors.blue;
+                              textColorDrink = AppColors.blue;
+                              textColorHello = AppColors.blue;
+                              textColorImfine = AppColors.blue;
+                              textColorEmergency = AppColors.blue;
 
                               speak('U');
                             });
@@ -2175,6 +2846,16 @@ class _ASLLibraryState extends State<ASLLibrary> {
                               isTappedX = false;
                               isTappedY = false;
                               isTappedZ = false;
+                              isTappedOk = false;
+                              isTappedDontwant = false;
+                              isTappedHelp = false;
+                              isTappedSorry = false;
+                              isTappedThankyou = false;
+                              isTappedWelcome = false;
+                              isTappedDrink = false;
+                              isTappedHello = false;
+                              isTappedImfine = false;
+                              isTappedEmergency = false;
                               _containerColorV =
                                   isTappedV ? AppColors.blue : AppColors.orange;
                               _containerColorA = AppColors.orange;
@@ -2202,6 +2883,16 @@ class _ASLLibraryState extends State<ASLLibrary> {
                               _containerColorX = AppColors.orange;
                               _containerColorY = AppColors.orange;
                               _containerColorZ = AppColors.orange;
+                              _containerColorOk = AppColors.orange;
+                              _containerColorDontwant = AppColors.orange;
+                              _containerColorHelp = AppColors.orange;
+                              _containerColorSorry = AppColors.orange;
+                              _containerColorThankyou = AppColors.orange;
+                              _containerColorWelcome = AppColors.orange;
+                              _containerColorDrink = AppColors.orange;
+                              _containerColorHello = AppColors.orange;
+                              _containerColorImfine = AppColors.orange;
+                              _containerColorEmergency = AppColors.orange;
                               textColorV =
                                   isTappedV ? AppColors.orange : AppColors.blue;
                               textColorA = AppColors.blue;
@@ -2229,6 +2920,16 @@ class _ASLLibraryState extends State<ASLLibrary> {
                               textColorX = AppColors.blue;
                               textColorY = AppColors.blue;
                               textColorZ = AppColors.blue;
+                              textColorOk = AppColors.blue;
+                              textColorDontwant = AppColors.blue;
+                              textColorHelp = AppColors.blue;
+                              textColorSorry = AppColors.blue;
+                              textColorThankyou = AppColors.blue;
+                              textColorWelcome = AppColors.blue;
+                              textColorDrink = AppColors.blue;
+                              textColorHello = AppColors.blue;
+                              textColorImfine = AppColors.blue;
+                              textColorEmergency = AppColors.blue;
 
                               speak('V');
                             });
@@ -2268,6 +2969,16 @@ class _ASLLibraryState extends State<ASLLibrary> {
                               isTappedX = false;
                               isTappedY = false;
                               isTappedZ = false;
+                              isTappedOk = false;
+                              isTappedDontwant = false;
+                              isTappedHelp = false;
+                              isTappedSorry = false;
+                              isTappedThankyou = false;
+                              isTappedWelcome = false;
+                              isTappedDrink = false;
+                              isTappedHello = false;
+                              isTappedImfine = false;
+                              isTappedEmergency = false;
                               _containerColorW =
                                   isTappedW ? AppColors.blue : AppColors.orange;
                               _containerColorA = AppColors.orange;
@@ -2295,6 +3006,16 @@ class _ASLLibraryState extends State<ASLLibrary> {
                               _containerColorX = AppColors.orange;
                               _containerColorY = AppColors.orange;
                               _containerColorZ = AppColors.orange;
+                              _containerColorOk = AppColors.orange;
+                              _containerColorDontwant = AppColors.orange;
+                              _containerColorHelp = AppColors.orange;
+                              _containerColorSorry = AppColors.orange;
+                              _containerColorThankyou = AppColors.orange;
+                              _containerColorWelcome = AppColors.orange;
+                              _containerColorDrink = AppColors.orange;
+                              _containerColorHello = AppColors.orange;
+                              _containerColorImfine = AppColors.orange;
+                              _containerColorEmergency = AppColors.orange;
                               textColorW =
                                   isTappedW ? AppColors.orange : AppColors.blue;
                               textColorA = AppColors.blue;
@@ -2322,6 +3043,16 @@ class _ASLLibraryState extends State<ASLLibrary> {
                               textColorX = AppColors.blue;
                               textColorY = AppColors.blue;
                               textColorZ = AppColors.blue;
+                              textColorOk = AppColors.blue;
+                              textColorDontwant = AppColors.blue;
+                              textColorHelp = AppColors.blue;
+                              textColorSorry = AppColors.blue;
+                              textColorThankyou = AppColors.blue;
+                              textColorWelcome = AppColors.blue;
+                              textColorDrink = AppColors.blue;
+                              textColorHello = AppColors.blue;
+                              textColorImfine = AppColors.blue;
+                              textColorEmergency = AppColors.blue;
 
                               speak('W');
                             });
@@ -2361,6 +3092,16 @@ class _ASLLibraryState extends State<ASLLibrary> {
                               isTappedX = true;
                               isTappedY = false;
                               isTappedZ = false;
+                              isTappedOk = false;
+                              isTappedDontwant = false;
+                              isTappedHelp = false;
+                              isTappedSorry = false;
+                              isTappedThankyou = false;
+                              isTappedWelcome = false;
+                              isTappedDrink = false;
+                              isTappedHello = false;
+                              isTappedImfine = false;
+                              isTappedEmergency = false;
                               _containerColorX =
                                   isTappedX ? AppColors.blue : AppColors.orange;
                               _containerColorA = AppColors.orange;
@@ -2388,6 +3129,16 @@ class _ASLLibraryState extends State<ASLLibrary> {
                               _containerColorW = AppColors.orange;
                               _containerColorY = AppColors.orange;
                               _containerColorZ = AppColors.orange;
+                              _containerColorOk = AppColors.orange;
+                              _containerColorDontwant = AppColors.orange;
+                              _containerColorHelp = AppColors.orange;
+                              _containerColorSorry = AppColors.orange;
+                              _containerColorThankyou = AppColors.orange;
+                              _containerColorWelcome = AppColors.orange;
+                              _containerColorDrink = AppColors.orange;
+                              _containerColorHello = AppColors.orange;
+                              _containerColorImfine = AppColors.orange;
+                              _containerColorEmergency = AppColors.orange;
                               textColorX =
                                   isTappedX ? AppColors.orange : AppColors.blue;
                               textColorA = AppColors.blue;
@@ -2415,6 +3166,16 @@ class _ASLLibraryState extends State<ASLLibrary> {
                               textColorW = AppColors.blue;
                               textColorY = AppColors.blue;
                               textColorZ = AppColors.blue;
+                              textColorOk = AppColors.blue;
+                              textColorDontwant = AppColors.blue;
+                              textColorHelp = AppColors.blue;
+                              textColorSorry = AppColors.blue;
+                              textColorThankyou = AppColors.blue;
+                              textColorWelcome = AppColors.blue;
+                              textColorDrink = AppColors.blue;
+                              textColorHello = AppColors.blue;
+                              textColorImfine = AppColors.blue;
+                              textColorEmergency = AppColors.blue;
 
                               speak('X');
                             });
@@ -2454,6 +3215,16 @@ class _ASLLibraryState extends State<ASLLibrary> {
                               isTappedX = false;
                               isTappedY = true;
                               isTappedZ = false;
+                              isTappedOk = false;
+                              isTappedDontwant = false;
+                              isTappedHelp = false;
+                              isTappedSorry = false;
+                              isTappedThankyou = false;
+                              isTappedWelcome = false;
+                              isTappedDrink = false;
+                              isTappedHello = false;
+                              isTappedImfine = false;
+                              isTappedEmergency = false;
                               _containerColorY =
                                   isTappedY ? AppColors.blue : AppColors.orange;
                               _containerColorA = AppColors.orange;
@@ -2481,6 +3252,16 @@ class _ASLLibraryState extends State<ASLLibrary> {
                               _containerColorW = AppColors.orange;
                               _containerColorX = AppColors.orange;
                               _containerColorZ = AppColors.orange;
+                              _containerColorOk = AppColors.orange;
+                              _containerColorDontwant = AppColors.orange;
+                              _containerColorHelp = AppColors.orange;
+                              _containerColorSorry = AppColors.orange;
+                              _containerColorThankyou = AppColors.orange;
+                              _containerColorWelcome = AppColors.orange;
+                              _containerColorDrink = AppColors.orange;
+                              _containerColorHello = AppColors.orange;
+                              _containerColorImfine = AppColors.orange;
+                              _containerColorEmergency = AppColors.orange;
                               textColorY =
                                   isTappedY ? AppColors.orange : AppColors.blue;
                               textColorA = AppColors.blue;
@@ -2508,6 +3289,16 @@ class _ASLLibraryState extends State<ASLLibrary> {
                               textColorW = AppColors.blue;
                               textColorX = AppColors.blue;
                               textColorZ = AppColors.blue;
+                              textColorOk = AppColors.blue;
+                              textColorDontwant = AppColors.blue;
+                              textColorHelp = AppColors.blue;
+                              textColorSorry = AppColors.blue;
+                              textColorThankyou = AppColors.blue;
+                              textColorWelcome = AppColors.blue;
+                              textColorDrink = AppColors.blue;
+                              textColorHello = AppColors.blue;
+                              textColorImfine = AppColors.blue;
+                              textColorEmergency = AppColors.blue;
 
                               speak('Y');
                             });
@@ -2547,6 +3338,16 @@ class _ASLLibraryState extends State<ASLLibrary> {
                               isTappedX = false;
                               isTappedY = false;
                               isTappedZ = true;
+                              isTappedOk = false;
+                              isTappedDontwant = false;
+                              isTappedHelp = false;
+                              isTappedSorry = false;
+                              isTappedThankyou = false;
+                              isTappedWelcome = false;
+                              isTappedDrink = false;
+                              isTappedHello = false;
+                              isTappedImfine = false;
+                              isTappedEmergency = false;
                               _containerColorZ =
                                   isTappedZ ? AppColors.blue : AppColors.orange;
                               _containerColorA = AppColors.orange;
@@ -2574,6 +3375,16 @@ class _ASLLibraryState extends State<ASLLibrary> {
                               _containerColorW = AppColors.orange;
                               _containerColorX = AppColors.orange;
                               _containerColorY = AppColors.orange;
+                              _containerColorOk = AppColors.orange;
+                              _containerColorDontwant = AppColors.orange;
+                              _containerColorHelp = AppColors.orange;
+                              _containerColorSorry = AppColors.orange;
+                              _containerColorThankyou = AppColors.orange;
+                              _containerColorWelcome = AppColors.orange;
+                              _containerColorDrink = AppColors.orange;
+                              _containerColorHello = AppColors.orange;
+                              _containerColorImfine = AppColors.orange;
+                              _containerColorEmergency = AppColors.orange;
                               textColorZ =
                                   isTappedZ ? AppColors.orange : AppColors.blue;
                               textColorA = AppColors.blue;
@@ -2601,6 +3412,16 @@ class _ASLLibraryState extends State<ASLLibrary> {
                               textColorW = AppColors.blue;
                               textColorX = AppColors.blue;
                               textColorY = AppColors.blue;
+                              textColorOk = AppColors.blue;
+                              textColorDontwant = AppColors.blue;
+                              textColorHelp = AppColors.blue;
+                              textColorSorry = AppColors.blue;
+                              textColorThankyou = AppColors.blue;
+                              textColorWelcome = AppColors.blue;
+                              textColorDrink = AppColors.blue;
+                              textColorHello = AppColors.blue;
+                              textColorImfine = AppColors.blue;
+                              textColorEmergency = AppColors.blue;
 
                               speak('Z');
                             });
@@ -2609,6 +3430,1266 @@ class _ASLLibraryState extends State<ASLLibrary> {
                             alphabet: 'Z',
                             containerColor: _containerColorZ,
                             textColor: textColorZ,
+                          ),
+                        ),
+                        GestureDetector(
+                          onTap: () {
+                            setState(() {
+                              isTappedA = false;
+                              isTappedB = false;
+                              isTappedC = false;
+                              isTappedD = false;
+                              isTappedE = false;
+                              isTappedF = false;
+                              isTappedG = false;
+                              isTappedH = false;
+                              isTappedI = false;
+                              isTappedJ = false;
+                              isTappedK = false;
+                              isTappedL = false;
+                              isTappedM = false;
+                              isTappedN = false;
+                              isTappedO = false;
+                              isTappedP = false;
+                              isTappedQ = false;
+                              isTappedR = false;
+                              isTappedS = false;
+                              isTappedT = false;
+                              isTappedU = false;
+                              isTappedV = false;
+                              isTappedW = false;
+                              isTappedX = false;
+                              isTappedY = false;
+                              isTappedZ = false;
+                              isTappedOk = !isTappedOk;
+                              isTappedDontwant = false;
+                              isTappedHelp = false;
+                              isTappedSorry = false;
+                              isTappedThankyou = false;
+                              isTappedWelcome = false;
+                              isTappedDrink = false;
+                              isTappedHello = false;
+                              isTappedImfine = false;
+                              isTappedEmergency = false;
+                              _containerColorOk = isTappedOk
+                                  ? AppColors.blue
+                                  : AppColors.orange;
+                              _containerColorA = AppColors.orange;
+                              _containerColorB = AppColors.orange;
+                              _containerColorC = AppColors.orange;
+                              _containerColorD = AppColors.orange;
+                              _containerColorE = AppColors.orange;
+                              _containerColorF = AppColors.orange;
+                              _containerColorG = AppColors.orange;
+                              _containerColorH = AppColors.orange;
+                              _containerColorI = AppColors.orange;
+                              _containerColorJ = AppColors.orange;
+                              _containerColorK = AppColors.orange;
+                              _containerColorL = AppColors.orange;
+                              _containerColorM = AppColors.orange;
+                              _containerColorN = AppColors.orange;
+                              _containerColorO = AppColors.orange;
+                              _containerColorP = AppColors.orange;
+                              _containerColorQ = AppColors.orange;
+                              _containerColorR = AppColors.orange;
+                              _containerColorS = AppColors.orange;
+                              _containerColorT = AppColors.orange;
+                              _containerColorU = AppColors.orange;
+                              _containerColorV = AppColors.orange;
+                              _containerColorW = AppColors.orange;
+                              _containerColorX = AppColors.orange;
+                              _containerColorY = AppColors.orange;
+                              _containerColorZ = AppColors.orange;
+                              _containerColorDontwant = AppColors.orange;
+                              _containerColorHelp = AppColors.orange;
+                              _containerColorSorry = AppColors.orange;
+                              _containerColorThankyou = AppColors.orange;
+                              _containerColorWelcome = AppColors.orange;
+                              _containerColorDrink = AppColors.orange;
+                              _containerColorHello = AppColors.orange;
+                              _containerColorImfine = AppColors.orange;
+                              _containerColorEmergency = AppColors.orange;
+                              textColorOk = isTappedOk
+                                  ? AppColors.orange
+                                  : AppColors.blue;
+                              textColorA = AppColors.blue;
+                              textColorB = AppColors.blue;
+                              textColorC = AppColors.blue;
+                              textColorD = AppColors.blue;
+                              textColorE = AppColors.blue;
+                              textColorF = AppColors.blue;
+                              textColorG = AppColors.blue;
+                              textColorH = AppColors.blue;
+                              textColorI = AppColors.blue;
+                              textColorJ = AppColors.blue;
+                              textColorK = AppColors.blue;
+                              textColorL = AppColors.blue;
+                              textColorM = AppColors.blue;
+                              textColorN = AppColors.blue;
+                              textColorO = AppColors.blue;
+                              textColorP = AppColors.blue;
+                              textColorQ = AppColors.blue;
+                              textColorR = AppColors.blue;
+                              textColorS = AppColors.blue;
+                              textColorT = AppColors.blue;
+                              textColorU = AppColors.blue;
+                              textColorV = AppColors.blue;
+                              textColorW = AppColors.blue;
+                              textColorX = AppColors.blue;
+                              textColorY = AppColors.blue;
+                              textColorZ = AppColors.blue;
+                              textColorDontwant = AppColors.blue;
+                              textColorHelp = AppColors.blue;
+                              textColorSorry = AppColors.blue;
+                              textColorThankyou = AppColors.blue;
+                              textColorWelcome = AppColors.blue;
+                              textColorDrink = AppColors.blue;
+                              textColorHello = AppColors.blue;
+                              textColorImfine = AppColors.blue;
+                              textColorEmergency = AppColors.blue;
+
+                              speak('Okay');
+                            });
+                          },
+                          child: ASLWidget(
+                            alphabet: 'Okay',
+                            containerColor: _containerColorOk,
+                            textColor: textColorOk,
+                          ),
+                        ),
+                        GestureDetector(
+                          onTap: () {
+                            setState(() {
+                              isTappedA = false;
+                              isTappedB = false;
+                              isTappedC = false;
+                              isTappedD = false;
+                              isTappedE = false;
+                              isTappedF = false;
+                              isTappedG = false;
+                              isTappedH = false;
+                              isTappedI = false;
+                              isTappedJ = false;
+                              isTappedK = false;
+                              isTappedL = false;
+                              isTappedM = false;
+                              isTappedN = false;
+                              isTappedO = false;
+                              isTappedP = false;
+                              isTappedQ = false;
+                              isTappedR = false;
+                              isTappedS = false;
+                              isTappedT = false;
+                              isTappedU = false;
+                              isTappedV = false;
+                              isTappedW = false;
+                              isTappedX = false;
+                              isTappedY = false;
+                              isTappedZ = false;
+                              isTappedOk = false;
+                              isTappedDontwant = true;
+                              isTappedHelp = false;
+                              isTappedSorry = false;
+                              isTappedThankyou = false;
+                              isTappedWelcome = false;
+                              isTappedDrink = false;
+                              isTappedHello = false;
+                              isTappedImfine = false;
+                              isTappedEmergency = false;
+                              _containerColorDontwant = isTappedDontwant
+                                  ? AppColors.blue
+                                  : AppColors.orange;
+                              _containerColorA = AppColors.orange;
+                              _containerColorB = AppColors.orange;
+                              _containerColorC = AppColors.orange;
+                              _containerColorD = AppColors.orange;
+                              _containerColorE = AppColors.orange;
+                              _containerColorF = AppColors.orange;
+                              _containerColorG = AppColors.orange;
+                              _containerColorH = AppColors.orange;
+                              _containerColorI = AppColors.orange;
+                              _containerColorJ = AppColors.orange;
+                              _containerColorK = AppColors.orange;
+                              _containerColorL = AppColors.orange;
+                              _containerColorM = AppColors.orange;
+                              _containerColorN = AppColors.orange;
+                              _containerColorO = AppColors.orange;
+                              _containerColorP = AppColors.orange;
+                              _containerColorQ = AppColors.orange;
+                              _containerColorR = AppColors.orange;
+                              _containerColorS = AppColors.orange;
+                              _containerColorT = AppColors.orange;
+                              _containerColorU = AppColors.orange;
+                              _containerColorV = AppColors.orange;
+                              _containerColorW = AppColors.orange;
+                              _containerColorX = AppColors.orange;
+                              _containerColorY = AppColors.orange;
+                              _containerColorZ = AppColors.orange;
+                              _containerColorOk = AppColors.orange;
+                              _containerColorHelp = AppColors.orange;
+                              _containerColorSorry = AppColors.orange;
+                              _containerColorThankyou = AppColors.orange;
+                              _containerColorWelcome = AppColors.orange;
+                              _containerColorDrink = AppColors.orange;
+                              _containerColorHello = AppColors.orange;
+                              _containerColorImfine = AppColors.orange;
+                              _containerColorEmergency = AppColors.orange;
+
+                              textColorDontwant = isTappedDontwant
+                                  ? AppColors.orange
+                                  : AppColors.blue;
+                              textColorA = AppColors.blue;
+                              textColorB = AppColors.blue;
+                              textColorC = AppColors.blue;
+                              textColorD = AppColors.blue;
+                              textColorE = AppColors.blue;
+                              textColorF = AppColors.blue;
+                              textColorG = AppColors.blue;
+                              textColorH = AppColors.blue;
+                              textColorI = AppColors.blue;
+                              textColorJ = AppColors.blue;
+                              textColorK = AppColors.blue;
+                              textColorL = AppColors.blue;
+                              textColorM = AppColors.blue;
+                              textColorN = AppColors.blue;
+                              textColorO = AppColors.blue;
+                              textColorP = AppColors.blue;
+                              textColorQ = AppColors.blue;
+                              textColorR = AppColors.blue;
+                              textColorS = AppColors.blue;
+                              textColorT = AppColors.blue;
+                              textColorU = AppColors.blue;
+                              textColorV = AppColors.blue;
+                              textColorW = AppColors.blue;
+                              textColorX = AppColors.blue;
+                              textColorY = AppColors.blue;
+                              textColorZ = AppColors.blue;
+                              textColorOk = AppColors.blue;
+                              textColorHelp = AppColors.blue;
+                              textColorSorry = AppColors.blue;
+                              textColorThankyou = AppColors.blue;
+                              textColorWelcome = AppColors.blue;
+                              textColorDrink = AppColors.blue;
+                              textColorHello = AppColors.blue;
+                              textColorImfine = AppColors.blue;
+                              textColorEmergency = AppColors.blue;
+
+                              speak("Don't want");
+                            });
+                          },
+                          child: ASLWidget(
+                            alphabet: "Don't want",
+                            containerColor: _containerColorDontwant,
+                            textColor: textColorDontwant,
+                          ),
+                        ),
+                        GestureDetector(
+                          onTap: () {
+                            setState(() {
+                              isTappedA = false;
+                              isTappedB = false;
+                              isTappedC = false;
+                              isTappedD = false;
+                              isTappedE = false;
+                              isTappedF = false;
+                              isTappedG = false;
+                              isTappedH = false;
+                              isTappedI = false;
+                              isTappedJ = false;
+                              isTappedK = false;
+                              isTappedL = false;
+                              isTappedM = false;
+                              isTappedN = false;
+                              isTappedO = false;
+                              isTappedP = false;
+                              isTappedQ = false;
+                              isTappedR = false;
+                              isTappedS = false;
+                              isTappedT = false;
+                              isTappedU = false;
+                              isTappedV = false;
+                              isTappedW = false;
+                              isTappedX = false;
+                              isTappedY = false;
+                              isTappedZ = false;
+                              isTappedOk = false;
+                              isTappedDontwant = false;
+                              isTappedHelp = true;
+                              isTappedSorry = false;
+                              isTappedThankyou = false;
+                              isTappedWelcome = false;
+                              isTappedDrink = false;
+                              isTappedHello = false;
+                              isTappedImfine = false;
+                              isTappedEmergency = false;
+                              _containerColorHelp = isTappedHelp
+                                  ? AppColors.blue
+                                  : AppColors.orange;
+                              _containerColorA = AppColors.orange;
+                              _containerColorB = AppColors.orange;
+                              _containerColorC = AppColors.orange;
+                              _containerColorD = AppColors.orange;
+                              _containerColorE = AppColors.orange;
+                              _containerColorF = AppColors.orange;
+                              _containerColorG = AppColors.orange;
+                              _containerColorH = AppColors.orange;
+                              _containerColorI = AppColors.orange;
+                              _containerColorJ = AppColors.orange;
+                              _containerColorK = AppColors.orange;
+                              _containerColorL = AppColors.orange;
+                              _containerColorM = AppColors.orange;
+                              _containerColorN = AppColors.orange;
+                              _containerColorO = AppColors.orange;
+                              _containerColorP = AppColors.orange;
+                              _containerColorQ = AppColors.orange;
+                              _containerColorR = AppColors.orange;
+                              _containerColorS = AppColors.orange;
+                              _containerColorT = AppColors.orange;
+                              _containerColorU = AppColors.orange;
+                              _containerColorV = AppColors.orange;
+                              _containerColorW = AppColors.orange;
+                              _containerColorX = AppColors.orange;
+                              _containerColorY = AppColors.orange;
+                              _containerColorZ = AppColors.orange;
+                              _containerColorOk = AppColors.orange;
+                              _containerColorDontwant = AppColors.orange;
+                              _containerColorSorry = AppColors.orange;
+                              _containerColorThankyou = AppColors.orange;
+                              _containerColorWelcome = AppColors.orange;
+                              _containerColorDrink = AppColors.orange;
+                              _containerColorHello = AppColors.orange;
+                              _containerColorImfine = AppColors.orange;
+                              _containerColorEmergency = AppColors.orange;
+
+                              textColorHelp = isTappedHelp
+                                  ? AppColors.orange
+                                  : AppColors.blue;
+                              textColorA = AppColors.blue;
+                              textColorB = AppColors.blue;
+                              textColorC = AppColors.blue;
+                              textColorD = AppColors.blue;
+                              textColorE = AppColors.blue;
+                              textColorF = AppColors.blue;
+                              textColorG = AppColors.blue;
+                              textColorH = AppColors.blue;
+                              textColorI = AppColors.blue;
+                              textColorJ = AppColors.blue;
+                              textColorK = AppColors.blue;
+                              textColorL = AppColors.blue;
+                              textColorM = AppColors.blue;
+                              textColorN = AppColors.blue;
+                              textColorO = AppColors.blue;
+                              textColorP = AppColors.blue;
+                              textColorQ = AppColors.blue;
+                              textColorR = AppColors.blue;
+                              textColorS = AppColors.blue;
+                              textColorT = AppColors.blue;
+                              textColorU = AppColors.blue;
+                              textColorV = AppColors.blue;
+                              textColorW = AppColors.blue;
+                              textColorX = AppColors.blue;
+                              textColorY = AppColors.blue;
+                              textColorZ = AppColors.blue;
+                              textColorOk = AppColors.blue;
+                              textColorDontwant = AppColors.blue;
+                              textColorSorry = AppColors.blue;
+                              textColorThankyou = AppColors.blue;
+                              textColorWelcome = AppColors.blue;
+                              textColorDrink = AppColors.blue;
+                              textColorHello = AppColors.blue;
+                              textColorImfine = AppColors.blue;
+                              textColorEmergency = AppColors.blue;
+
+                              speak('Help');
+                            });
+                          },
+                          child: ASLWidget(
+                            alphabet: "Help",
+                            containerColor: _containerColorHelp,
+                            textColor: textColorHelp,
+                          ),
+                        ),
+                        GestureDetector(
+                          onTap: () {
+                            setState(() {
+                              isTappedA = false;
+                              isTappedB = false;
+                              isTappedC = false;
+                              isTappedD = false;
+                              isTappedE = false;
+                              isTappedF = false;
+                              isTappedG = false;
+                              isTappedH = false;
+                              isTappedI = false;
+                              isTappedJ = false;
+                              isTappedK = false;
+                              isTappedL = false;
+                              isTappedM = false;
+                              isTappedN = false;
+                              isTappedO = false;
+                              isTappedP = false;
+                              isTappedQ = false;
+                              isTappedR = false;
+                              isTappedS = false;
+                              isTappedT = false;
+                              isTappedU = false;
+                              isTappedV = false;
+                              isTappedW = false;
+                              isTappedX = false;
+                              isTappedY = false;
+                              isTappedZ = false;
+                              isTappedOk = false;
+                              isTappedDontwant = false;
+                              isTappedHelp = false;
+                              isTappedSorry = true;
+                              isTappedThankyou = false;
+                              isTappedWelcome = false;
+                              isTappedDrink = false;
+                              isTappedHello = false;
+                              isTappedImfine = false;
+                              isTappedEmergency = false;
+                              _containerColorSorry = isTappedSorry
+                                  ? AppColors.blue
+                                  : AppColors.orange;
+                              _containerColorA = AppColors.orange;
+                              _containerColorB = AppColors.orange;
+                              _containerColorC = AppColors.orange;
+                              _containerColorD = AppColors.orange;
+                              _containerColorE = AppColors.orange;
+                              _containerColorF = AppColors.orange;
+                              _containerColorG = AppColors.orange;
+                              _containerColorH = AppColors.orange;
+                              _containerColorI = AppColors.orange;
+                              _containerColorJ = AppColors.orange;
+                              _containerColorK = AppColors.orange;
+                              _containerColorL = AppColors.orange;
+                              _containerColorM = AppColors.orange;
+                              _containerColorN = AppColors.orange;
+                              _containerColorO = AppColors.orange;
+                              _containerColorP = AppColors.orange;
+                              _containerColorQ = AppColors.orange;
+                              _containerColorR = AppColors.orange;
+                              _containerColorS = AppColors.orange;
+                              _containerColorT = AppColors.orange;
+                              _containerColorU = AppColors.orange;
+                              _containerColorV = AppColors.orange;
+                              _containerColorW = AppColors.orange;
+                              _containerColorX = AppColors.orange;
+                              _containerColorY = AppColors.orange;
+                              _containerColorZ = AppColors.orange;
+                              _containerColorOk = AppColors.orange;
+                              _containerColorDontwant = AppColors.orange;
+                              _containerColorHelp = AppColors.orange;
+                              _containerColorThankyou = AppColors.orange;
+                              _containerColorWelcome = AppColors.orange;
+                              _containerColorDrink = AppColors.orange;
+                              _containerColorHello = AppColors.orange;
+                              _containerColorImfine = AppColors.orange;
+                              _containerColorEmergency = AppColors.orange;
+
+                              textColorSorry = isTappedSorry
+                                  ? AppColors.orange
+                                  : AppColors.blue;
+                              textColorA = AppColors.blue;
+                              textColorB = AppColors.blue;
+                              textColorC = AppColors.blue;
+                              textColorD = AppColors.blue;
+                              textColorE = AppColors.blue;
+                              textColorF = AppColors.blue;
+                              textColorG = AppColors.blue;
+                              textColorH = AppColors.blue;
+                              textColorI = AppColors.blue;
+                              textColorJ = AppColors.blue;
+                              textColorK = AppColors.blue;
+                              textColorL = AppColors.blue;
+                              textColorM = AppColors.blue;
+                              textColorN = AppColors.blue;
+                              textColorO = AppColors.blue;
+                              textColorP = AppColors.blue;
+                              textColorQ = AppColors.blue;
+                              textColorR = AppColors.blue;
+                              textColorS = AppColors.blue;
+                              textColorT = AppColors.blue;
+                              textColorU = AppColors.blue;
+                              textColorV = AppColors.blue;
+                              textColorW = AppColors.blue;
+                              textColorX = AppColors.blue;
+                              textColorY = AppColors.blue;
+                              textColorZ = AppColors.blue;
+                              textColorOk = AppColors.blue;
+                              textColorDontwant = AppColors.blue;
+                              textColorHelp = AppColors.blue;
+                              textColorThankyou = AppColors.blue;
+                              textColorWelcome = AppColors.blue;
+                              textColorDrink = AppColors.blue;
+                              textColorHello = AppColors.blue;
+                              textColorImfine = AppColors.blue;
+                              textColorEmergency = AppColors.blue;
+
+                              speak('Sorry');
+                            });
+                          },
+                          child: ASLWidget(
+                            alphabet: "Sorry",
+                            containerColor: _containerColorSorry,
+                            textColor: textColorSorry,
+                          ),
+                        ),
+                        GestureDetector(
+                          onTap: () {
+                            setState(() {
+                              isTappedA = false;
+                              isTappedB = false;
+                              isTappedC = false;
+                              isTappedD = false;
+                              isTappedE = false;
+                              isTappedF = false;
+                              isTappedG = false;
+                              isTappedH = false;
+                              isTappedI = false;
+                              isTappedJ = false;
+                              isTappedK = false;
+                              isTappedL = false;
+                              isTappedM = false;
+                              isTappedN = false;
+                              isTappedO = false;
+                              isTappedP = false;
+                              isTappedQ = false;
+                              isTappedR = false;
+                              isTappedS = false;
+                              isTappedT = false;
+                              isTappedU = false;
+                              isTappedV = false;
+                              isTappedW = false;
+                              isTappedX = false;
+                              isTappedY = false;
+                              isTappedZ = false;
+                              isTappedOk = false;
+                              isTappedDontwant = false;
+                              isTappedHelp = false;
+                              isTappedSorry = false;
+                              isTappedThankyou = true;
+                              isTappedWelcome = false;
+                              isTappedDrink = false;
+                              isTappedHello = false;
+                              isTappedImfine = false;
+                              isTappedEmergency = false;
+                              _containerColorThankyou = isTappedThankyou
+                                  ? AppColors.blue
+                                  : AppColors.orange;
+                              _containerColorA = AppColors.orange;
+                              _containerColorB = AppColors.orange;
+                              _containerColorC = AppColors.orange;
+                              _containerColorD = AppColors.orange;
+                              _containerColorE = AppColors.orange;
+                              _containerColorF = AppColors.orange;
+                              _containerColorG = AppColors.orange;
+                              _containerColorH = AppColors.orange;
+                              _containerColorI = AppColors.orange;
+                              _containerColorJ = AppColors.orange;
+                              _containerColorK = AppColors.orange;
+                              _containerColorL = AppColors.orange;
+                              _containerColorM = AppColors.orange;
+                              _containerColorN = AppColors.orange;
+                              _containerColorO = AppColors.orange;
+                              _containerColorP = AppColors.orange;
+                              _containerColorQ = AppColors.orange;
+                              _containerColorR = AppColors.orange;
+                              _containerColorS = AppColors.orange;
+                              _containerColorT = AppColors.orange;
+                              _containerColorU = AppColors.orange;
+                              _containerColorV = AppColors.orange;
+                              _containerColorW = AppColors.orange;
+                              _containerColorX = AppColors.orange;
+                              _containerColorY = AppColors.orange;
+                              _containerColorZ = AppColors.orange;
+                              _containerColorOk = AppColors.orange;
+                              _containerColorDontwant = AppColors.orange;
+                              _containerColorHelp = AppColors.orange;
+                              _containerColorSorry = AppColors.orange;
+                              _containerColorWelcome = AppColors.orange;
+                              _containerColorDrink = AppColors.orange;
+                              _containerColorHello = AppColors.orange;
+                              _containerColorImfine = AppColors.orange;
+                              _containerColorEmergency = AppColors.orange;
+
+                              textColorThankyou = isTappedThankyou
+                                  ? AppColors.orange
+                                  : AppColors.blue;
+                              textColorA = AppColors.blue;
+                              textColorB = AppColors.blue;
+                              textColorC = AppColors.blue;
+                              textColorD = AppColors.blue;
+                              textColorE = AppColors.blue;
+                              textColorF = AppColors.blue;
+                              textColorG = AppColors.blue;
+                              textColorH = AppColors.blue;
+                              textColorI = AppColors.blue;
+                              textColorJ = AppColors.blue;
+                              textColorK = AppColors.blue;
+                              textColorL = AppColors.blue;
+                              textColorM = AppColors.blue;
+                              textColorN = AppColors.blue;
+                              textColorO = AppColors.blue;
+                              textColorP = AppColors.blue;
+                              textColorQ = AppColors.blue;
+                              textColorR = AppColors.blue;
+                              textColorS = AppColors.blue;
+                              textColorT = AppColors.blue;
+                              textColorU = AppColors.blue;
+                              textColorV = AppColors.blue;
+                              textColorW = AppColors.blue;
+                              textColorX = AppColors.blue;
+                              textColorY = AppColors.blue;
+                              textColorZ = AppColors.blue;
+                              textColorOk = AppColors.blue;
+                              textColorDontwant = AppColors.blue;
+                              textColorHelp = AppColors.blue;
+                              textColorSorry = AppColors.blue;
+                              textColorWelcome = AppColors.blue;
+                              textColorDrink = AppColors.blue;
+                              textColorHello = AppColors.blue;
+                              textColorImfine = AppColors.blue;
+                              textColorEmergency = AppColors.blue;
+
+                              speak('Thank you');
+                            });
+                          },
+                          child: ASLWidget(
+                            alphabet: "Thank you",
+                            containerColor: _containerColorThankyou,
+                            textColor: textColorThankyou,
+                          ),
+                        ),
+                        GestureDetector(
+                          onTap: () {
+                            setState(() {
+                              isTappedA = false;
+                              isTappedB = false;
+                              isTappedC = false;
+                              isTappedD = false;
+                              isTappedE = false;
+                              isTappedF = false;
+                              isTappedG = false;
+                              isTappedH = false;
+                              isTappedI = false;
+                              isTappedJ = false;
+                              isTappedK = false;
+                              isTappedL = false;
+                              isTappedM = false;
+                              isTappedN = false;
+                              isTappedO = false;
+                              isTappedP = false;
+                              isTappedQ = false;
+                              isTappedR = false;
+                              isTappedS = false;
+                              isTappedT = false;
+                              isTappedU = false;
+                              isTappedV = false;
+                              isTappedW = false;
+                              isTappedX = false;
+                              isTappedY = false;
+                              isTappedZ = false;
+                              isTappedOk = false;
+                              isTappedDontwant = false;
+                              isTappedHelp = false;
+                              isTappedSorry = false;
+                              isTappedThankyou = false;
+                              isTappedWelcome = true;
+                              isTappedDrink = false;
+                              isTappedHello = false;
+                              isTappedImfine = false;
+                              isTappedEmergency = false;
+                              _containerColorWelcome = isTappedWelcome
+                                  ? AppColors.blue
+                                  : AppColors.orange;
+                              _containerColorA = AppColors.orange;
+                              _containerColorB = AppColors.orange;
+                              _containerColorC = AppColors.orange;
+                              _containerColorD = AppColors.orange;
+                              _containerColorE = AppColors.orange;
+                              _containerColorF = AppColors.orange;
+                              _containerColorG = AppColors.orange;
+                              _containerColorH = AppColors.orange;
+                              _containerColorI = AppColors.orange;
+                              _containerColorJ = AppColors.orange;
+                              _containerColorK = AppColors.orange;
+                              _containerColorL = AppColors.orange;
+                              _containerColorM = AppColors.orange;
+                              _containerColorN = AppColors.orange;
+                              _containerColorO = AppColors.orange;
+                              _containerColorP = AppColors.orange;
+                              _containerColorQ = AppColors.orange;
+                              _containerColorR = AppColors.orange;
+                              _containerColorS = AppColors.orange;
+                              _containerColorT = AppColors.orange;
+                              _containerColorU = AppColors.orange;
+                              _containerColorV = AppColors.orange;
+                              _containerColorW = AppColors.orange;
+                              _containerColorX = AppColors.orange;
+                              _containerColorY = AppColors.orange;
+                              _containerColorZ = AppColors.orange;
+                              _containerColorOk = AppColors.orange;
+                              _containerColorDontwant = AppColors.orange;
+                              _containerColorHelp = AppColors.orange;
+                              _containerColorSorry = AppColors.orange;
+                              _containerColorThankyou = AppColors.orange;
+                              _containerColorDrink = AppColors.orange;
+                              _containerColorHello = AppColors.orange;
+                              _containerColorImfine = AppColors.orange;
+                              _containerColorEmergency = AppColors.orange;
+
+                              textColorWelcome = isTappedWelcome
+                                  ? AppColors.orange
+                                  : AppColors.blue;
+                              textColorA = AppColors.blue;
+                              textColorB = AppColors.blue;
+                              textColorC = AppColors.blue;
+                              textColorD = AppColors.blue;
+                              textColorE = AppColors.blue;
+                              textColorF = AppColors.blue;
+                              textColorG = AppColors.blue;
+                              textColorH = AppColors.blue;
+                              textColorI = AppColors.blue;
+                              textColorJ = AppColors.blue;
+                              textColorK = AppColors.blue;
+                              textColorL = AppColors.blue;
+                              textColorM = AppColors.blue;
+                              textColorN = AppColors.blue;
+                              textColorO = AppColors.blue;
+                              textColorP = AppColors.blue;
+                              textColorQ = AppColors.blue;
+                              textColorR = AppColors.blue;
+                              textColorS = AppColors.blue;
+                              textColorT = AppColors.blue;
+                              textColorU = AppColors.blue;
+                              textColorV = AppColors.blue;
+                              textColorW = AppColors.blue;
+                              textColorX = AppColors.blue;
+                              textColorY = AppColors.blue;
+                              textColorZ = AppColors.blue;
+                              textColorOk = AppColors.blue;
+                              textColorDontwant = AppColors.blue;
+                              textColorHelp = AppColors.blue;
+                              textColorSorry = AppColors.blue;
+                              textColorThankyou = AppColors.blue;
+                              textColorDrink = AppColors.blue;
+                              textColorHello = AppColors.blue;
+                              textColorImfine = AppColors.blue;
+                              textColorEmergency = AppColors.blue;
+
+                              speak('Welcome');
+                            });
+                          },
+                          child: ASLWidget(
+                            alphabet: "Welcome",
+                            containerColor: _containerColorWelcome,
+                            textColor: textColorWelcome,
+                          ),
+                        ),
+                        GestureDetector(
+                          onTap: () {
+                            setState(() {
+                              isTappedA = false;
+                              isTappedB = false;
+                              isTappedC = false;
+                              isTappedD = false;
+                              isTappedE = false;
+                              isTappedF = false;
+                              isTappedG = false;
+                              isTappedH = false;
+                              isTappedI = false;
+                              isTappedJ = false;
+                              isTappedK = false;
+                              isTappedL = false;
+                              isTappedM = false;
+                              isTappedN = false;
+                              isTappedO = false;
+                              isTappedP = false;
+                              isTappedQ = false;
+                              isTappedR = false;
+                              isTappedS = false;
+                              isTappedT = false;
+                              isTappedU = false;
+                              isTappedV = false;
+                              isTappedW = false;
+                              isTappedX = false;
+                              isTappedY = false;
+                              isTappedZ = false;
+                              isTappedOk = false;
+                              isTappedDontwant = false;
+                              isTappedHelp = false;
+                              isTappedSorry = false;
+                              isTappedThankyou = false;
+                              isTappedWelcome = false;
+                              isTappedDrink = true;
+                              isTappedHello = false;
+                              isTappedImfine = false;
+                              isTappedEmergency = false;
+
+                              _containerColorDrink = isTappedDrink
+                                  ? AppColors.blue
+                                  : AppColors.orange;
+                              _containerColorA = AppColors.orange;
+                              _containerColorB = AppColors.orange;
+                              _containerColorC = AppColors.orange;
+                              _containerColorD = AppColors.orange;
+                              _containerColorE = AppColors.orange;
+                              _containerColorF = AppColors.orange;
+                              _containerColorG = AppColors.orange;
+                              _containerColorH = AppColors.orange;
+                              _containerColorI = AppColors.orange;
+                              _containerColorJ = AppColors.orange;
+                              _containerColorK = AppColors.orange;
+                              _containerColorL = AppColors.orange;
+                              _containerColorM = AppColors.orange;
+                              _containerColorN = AppColors.orange;
+                              _containerColorO = AppColors.orange;
+                              _containerColorP = AppColors.orange;
+                              _containerColorQ = AppColors.orange;
+                              _containerColorR = AppColors.orange;
+                              _containerColorS = AppColors.orange;
+                              _containerColorT = AppColors.orange;
+                              _containerColorU = AppColors.orange;
+                              _containerColorV = AppColors.orange;
+                              _containerColorW = AppColors.orange;
+                              _containerColorX = AppColors.orange;
+                              _containerColorY = AppColors.orange;
+                              _containerColorZ = AppColors.orange;
+                              _containerColorOk = AppColors.orange;
+                              _containerColorDontwant = AppColors.orange;
+                              _containerColorHelp = AppColors.orange;
+                              _containerColorSorry = AppColors.orange;
+                              _containerColorWelcome = AppColors.orange;
+                              _containerColorThankyou = AppColors.orange;
+                              _containerColorHello = AppColors.orange;
+                              _containerColorImfine = AppColors.orange;
+                              _containerColorEmergency = AppColors.orange;
+
+                              textColorDrink = isTappedDrink
+                                  ? AppColors.orange
+                                  : AppColors.blue;
+                              textColorA = AppColors.blue;
+                              textColorB = AppColors.blue;
+                              textColorC = AppColors.blue;
+                              textColorD = AppColors.blue;
+                              textColorE = AppColors.blue;
+                              textColorF = AppColors.blue;
+                              textColorG = AppColors.blue;
+                              textColorH = AppColors.blue;
+                              textColorI = AppColors.blue;
+                              textColorJ = AppColors.blue;
+                              textColorK = AppColors.blue;
+                              textColorL = AppColors.blue;
+                              textColorM = AppColors.blue;
+                              textColorN = AppColors.blue;
+                              textColorO = AppColors.blue;
+                              textColorP = AppColors.blue;
+                              textColorQ = AppColors.blue;
+                              textColorR = AppColors.blue;
+                              textColorS = AppColors.blue;
+                              textColorT = AppColors.blue;
+                              textColorU = AppColors.blue;
+                              textColorV = AppColors.blue;
+                              textColorW = AppColors.blue;
+                              textColorX = AppColors.blue;
+                              textColorY = AppColors.blue;
+                              textColorZ = AppColors.blue;
+                              textColorOk = AppColors.blue;
+                              textColorDontwant = AppColors.blue;
+                              textColorHelp = AppColors.blue;
+                              textColorSorry = AppColors.blue;
+                              textColorThankyou = AppColors.blue;
+                              textColorWelcome = AppColors.blue;
+                              textColorHello = AppColors.blue;
+                              textColorImfine = AppColors.blue;
+                              textColorEmergency = AppColors.blue;
+
+                              speak('Drink');
+                            });
+                          },
+                          child: ASLWidget(
+                            alphabet: "Drink",
+                            containerColor: _containerColorDrink,
+                            textColor: textColorDrink,
+                          ),
+                        ),
+                        GestureDetector(
+                          onTap: () {
+                            setState(() {
+                              isTappedA = false;
+                              isTappedB = false;
+                              isTappedC = false;
+                              isTappedD = false;
+                              isTappedE = false;
+                              isTappedF = false;
+                              isTappedG = false;
+                              isTappedH = false;
+                              isTappedI = false;
+                              isTappedJ = false;
+                              isTappedK = false;
+                              isTappedL = false;
+                              isTappedM = false;
+                              isTappedN = false;
+                              isTappedO = false;
+                              isTappedP = false;
+                              isTappedQ = false;
+                              isTappedR = false;
+                              isTappedS = false;
+                              isTappedT = false;
+                              isTappedU = false;
+                              isTappedV = false;
+                              isTappedW = false;
+                              isTappedX = false;
+                              isTappedY = false;
+                              isTappedZ = false;
+                              isTappedOk = false;
+                              isTappedDontwant = false;
+                              isTappedHelp = false;
+                              isTappedSorry = false;
+                              isTappedThankyou = false;
+                              isTappedWelcome = false;
+                              isTappedDrink = false;
+                              isTappedHello = true;
+                              isTappedImfine = false;
+                              isTappedEmergency = false;
+                              _containerColorHello = isTappedHello
+                                  ? AppColors.blue
+                                  : AppColors.orange;
+                              _containerColorA = AppColors.orange;
+                              _containerColorB = AppColors.orange;
+                              _containerColorC = AppColors.orange;
+                              _containerColorD = AppColors.orange;
+                              _containerColorE = AppColors.orange;
+                              _containerColorF = AppColors.orange;
+                              _containerColorG = AppColors.orange;
+                              _containerColorH = AppColors.orange;
+                              _containerColorI = AppColors.orange;
+                              _containerColorJ = AppColors.orange;
+                              _containerColorK = AppColors.orange;
+                              _containerColorL = AppColors.orange;
+                              _containerColorM = AppColors.orange;
+                              _containerColorN = AppColors.orange;
+                              _containerColorO = AppColors.orange;
+                              _containerColorP = AppColors.orange;
+                              _containerColorQ = AppColors.orange;
+                              _containerColorR = AppColors.orange;
+                              _containerColorS = AppColors.orange;
+                              _containerColorT = AppColors.orange;
+                              _containerColorU = AppColors.orange;
+                              _containerColorV = AppColors.orange;
+                              _containerColorW = AppColors.orange;
+                              _containerColorX = AppColors.orange;
+                              _containerColorY = AppColors.orange;
+                              _containerColorZ = AppColors.orange;
+                              _containerColorOk = AppColors.orange;
+                              _containerColorDontwant = AppColors.orange;
+                              _containerColorHelp = AppColors.orange;
+                              _containerColorSorry = AppColors.orange;
+                              _containerColorWelcome = AppColors.orange;
+                              _containerColorThankyou = AppColors.orange;
+                              _containerColorDrink = AppColors.orange;
+                              _containerColorImfine = AppColors.orange;
+                              _containerColorEmergency = AppColors.orange;
+
+                              textColorHello = isTappedHello
+                                  ? AppColors.orange
+                                  : AppColors.blue;
+                              textColorA = AppColors.blue;
+                              textColorB = AppColors.blue;
+                              textColorC = AppColors.blue;
+                              textColorD = AppColors.blue;
+                              textColorE = AppColors.blue;
+                              textColorF = AppColors.blue;
+                              textColorG = AppColors.blue;
+                              textColorH = AppColors.blue;
+                              textColorI = AppColors.blue;
+                              textColorJ = AppColors.blue;
+                              textColorK = AppColors.blue;
+                              textColorL = AppColors.blue;
+                              textColorM = AppColors.blue;
+                              textColorN = AppColors.blue;
+                              textColorO = AppColors.blue;
+                              textColorP = AppColors.blue;
+                              textColorQ = AppColors.blue;
+                              textColorR = AppColors.blue;
+                              textColorS = AppColors.blue;
+                              textColorT = AppColors.blue;
+                              textColorU = AppColors.blue;
+                              textColorV = AppColors.blue;
+                              textColorW = AppColors.blue;
+                              textColorX = AppColors.blue;
+                              textColorY = AppColors.blue;
+                              textColorZ = AppColors.blue;
+                              textColorOk = AppColors.blue;
+                              textColorDontwant = AppColors.blue;
+                              textColorHelp = AppColors.blue;
+                              textColorSorry = AppColors.blue;
+                              textColorThankyou = AppColors.blue;
+                              textColorWelcome = AppColors.blue;
+                              textColorDrink = AppColors.blue;
+                              textColorImfine = AppColors.blue;
+                              textColorEmergency = AppColors.blue;
+
+                              speak('Hello');
+                            });
+                          },
+                          child: ASLWidget(
+                            alphabet: "Hello",
+                            containerColor: _containerColorHello,
+                            textColor: textColorHello,
+                          ),
+                        ),
+                        GestureDetector(
+                          onTap: () {
+                            setState(() {
+                              isTappedA = false;
+                              isTappedB = false;
+                              isTappedC = false;
+                              isTappedD = false;
+                              isTappedE = false;
+                              isTappedF = false;
+                              isTappedG = false;
+                              isTappedH = false;
+                              isTappedI = false;
+                              isTappedJ = false;
+                              isTappedK = false;
+                              isTappedL = false;
+                              isTappedM = false;
+                              isTappedN = false;
+                              isTappedO = false;
+                              isTappedP = false;
+                              isTappedQ = false;
+                              isTappedR = false;
+                              isTappedS = false;
+                              isTappedT = false;
+                              isTappedU = false;
+                              isTappedV = false;
+                              isTappedW = false;
+                              isTappedX = false;
+                              isTappedY = false;
+                              isTappedZ = false;
+                              isTappedOk = false;
+                              isTappedDontwant = false;
+                              isTappedHelp = false;
+                              isTappedSorry = false;
+                              isTappedThankyou = false;
+                              isTappedWelcome = false;
+                              isTappedDrink = false;
+                              isTappedHello = false;
+                              isTappedImfine = true;
+                              isTappedEmergency = false;
+                              _containerColorImfine = isTappedImfine
+                                  ? AppColors.blue
+                                  : AppColors.orange;
+                              _containerColorA = AppColors.orange;
+                              _containerColorB = AppColors.orange;
+                              _containerColorC = AppColors.orange;
+                              _containerColorD = AppColors.orange;
+                              _containerColorE = AppColors.orange;
+                              _containerColorF = AppColors.orange;
+                              _containerColorG = AppColors.orange;
+                              _containerColorH = AppColors.orange;
+                              _containerColorI = AppColors.orange;
+                              _containerColorJ = AppColors.orange;
+                              _containerColorK = AppColors.orange;
+                              _containerColorL = AppColors.orange;
+                              _containerColorM = AppColors.orange;
+                              _containerColorN = AppColors.orange;
+                              _containerColorO = AppColors.orange;
+                              _containerColorP = AppColors.orange;
+                              _containerColorQ = AppColors.orange;
+                              _containerColorR = AppColors.orange;
+                              _containerColorS = AppColors.orange;
+                              _containerColorT = AppColors.orange;
+                              _containerColorU = AppColors.orange;
+                              _containerColorV = AppColors.orange;
+                              _containerColorW = AppColors.orange;
+                              _containerColorX = AppColors.orange;
+                              _containerColorY = AppColors.orange;
+                              _containerColorZ = AppColors.orange;
+                              _containerColorOk = AppColors.orange;
+                              _containerColorDontwant = AppColors.orange;
+                              _containerColorHelp = AppColors.orange;
+                              _containerColorSorry = AppColors.orange;
+                              _containerColorWelcome = AppColors.orange;
+                              _containerColorThankyou = AppColors.orange;
+                              _containerColorDrink = AppColors.orange;
+                              _containerColorHello = AppColors.orange;
+                              _containerColorEmergency = AppColors.orange;
+
+                              textColorImfine = isTappedImfine
+                                  ? AppColors.orange
+                                  : AppColors.blue;
+                              textColorA = AppColors.blue;
+                              textColorB = AppColors.blue;
+                              textColorC = AppColors.blue;
+                              textColorD = AppColors.blue;
+                              textColorE = AppColors.blue;
+                              textColorF = AppColors.blue;
+                              textColorG = AppColors.blue;
+                              textColorH = AppColors.blue;
+                              textColorI = AppColors.blue;
+                              textColorJ = AppColors.blue;
+                              textColorK = AppColors.blue;
+                              textColorL = AppColors.blue;
+                              textColorM = AppColors.blue;
+                              textColorN = AppColors.blue;
+                              textColorO = AppColors.blue;
+                              textColorP = AppColors.blue;
+                              textColorQ = AppColors.blue;
+                              textColorR = AppColors.blue;
+                              textColorS = AppColors.blue;
+                              textColorT = AppColors.blue;
+                              textColorU = AppColors.blue;
+                              textColorV = AppColors.blue;
+                              textColorW = AppColors.blue;
+                              textColorX = AppColors.blue;
+                              textColorY = AppColors.blue;
+                              textColorZ = AppColors.blue;
+                              textColorOk = AppColors.blue;
+                              textColorDontwant = AppColors.blue;
+                              textColorHelp = AppColors.blue;
+                              textColorSorry = AppColors.blue;
+                              textColorThankyou = AppColors.blue;
+                              textColorWelcome = AppColors.blue;
+                              textColorHello = AppColors.blue;
+                              textColorDrink = AppColors.blue;
+                              textColorEmergency = AppColors.blue;
+
+                              speak("I'm fine");
+                            });
+                          },
+                          child: ASLWidget(
+                            alphabet: "I'm fine",
+                            containerColor: _containerColorImfine,
+                            textColor: textColorImfine,
+                          ),
+                        ),
+                        GestureDetector(
+                          onTap: () {
+                            setState(() {
+                              isTappedA = false;
+                              isTappedB = false;
+                              isTappedC = false;
+                              isTappedD = false;
+                              isTappedE = false;
+                              isTappedF = false;
+                              isTappedG = false;
+                              isTappedH = false;
+                              isTappedI = false;
+                              isTappedJ = false;
+                              isTappedK = false;
+                              isTappedL = false;
+                              isTappedM = false;
+                              isTappedN = false;
+                              isTappedO = false;
+                              isTappedP = false;
+                              isTappedQ = false;
+                              isTappedR = false;
+                              isTappedS = false;
+                              isTappedT = false;
+                              isTappedU = false;
+                              isTappedV = false;
+                              isTappedW = false;
+                              isTappedX = false;
+                              isTappedY = false;
+                              isTappedZ = false;
+                              isTappedOk = false;
+                              isTappedDontwant = false;
+                              isTappedHelp = false;
+                              isTappedSorry = false;
+                              isTappedThankyou = false;
+                              isTappedWelcome = false;
+                              isTappedDrink = false;
+                              isTappedHello = false;
+                              isTappedImfine = false;
+                              isTappedEmergency = true;
+                              _containerColorEmergency = isTappedEmergency
+                                  ? AppColors.blue
+                                  : AppColors.orange;
+                              _containerColorA = AppColors.orange;
+                              _containerColorB = AppColors.orange;
+                              _containerColorC = AppColors.orange;
+                              _containerColorD = AppColors.orange;
+                              _containerColorE = AppColors.orange;
+                              _containerColorF = AppColors.orange;
+                              _containerColorG = AppColors.orange;
+                              _containerColorH = AppColors.orange;
+                              _containerColorI = AppColors.orange;
+                              _containerColorJ = AppColors.orange;
+                              _containerColorK = AppColors.orange;
+                              _containerColorL = AppColors.orange;
+                              _containerColorM = AppColors.orange;
+                              _containerColorN = AppColors.orange;
+                              _containerColorO = AppColors.orange;
+                              _containerColorP = AppColors.orange;
+                              _containerColorQ = AppColors.orange;
+                              _containerColorR = AppColors.orange;
+                              _containerColorS = AppColors.orange;
+                              _containerColorT = AppColors.orange;
+                              _containerColorU = AppColors.orange;
+                              _containerColorV = AppColors.orange;
+                              _containerColorW = AppColors.orange;
+                              _containerColorX = AppColors.orange;
+                              _containerColorY = AppColors.orange;
+                              _containerColorZ = AppColors.orange;
+                              _containerColorOk = AppColors.orange;
+                              _containerColorDontwant = AppColors.orange;
+                              _containerColorHelp = AppColors.orange;
+                              _containerColorSorry = AppColors.orange;
+                              _containerColorWelcome = AppColors.orange;
+                              _containerColorThankyou = AppColors.orange;
+                              _containerColorDrink = AppColors.orange;
+                              _containerColorImfine = AppColors.orange;
+                              _containerColorHello = AppColors.orange;
+
+                              textColorEmergency = isTappedEmergency
+                                  ? AppColors.orange
+                                  : AppColors.blue;
+                              textColorA = AppColors.blue;
+                              textColorB = AppColors.blue;
+                              textColorC = AppColors.blue;
+                              textColorD = AppColors.blue;
+                              textColorE = AppColors.blue;
+                              textColorF = AppColors.blue;
+                              textColorG = AppColors.blue;
+                              textColorH = AppColors.blue;
+                              textColorI = AppColors.blue;
+                              textColorJ = AppColors.blue;
+                              textColorK = AppColors.blue;
+                              textColorL = AppColors.blue;
+                              textColorM = AppColors.blue;
+                              textColorN = AppColors.blue;
+                              textColorO = AppColors.blue;
+                              textColorP = AppColors.blue;
+                              textColorQ = AppColors.blue;
+                              textColorR = AppColors.blue;
+                              textColorS = AppColors.blue;
+                              textColorT = AppColors.blue;
+                              textColorU = AppColors.blue;
+                              textColorV = AppColors.blue;
+                              textColorW = AppColors.blue;
+                              textColorX = AppColors.blue;
+                              textColorY = AppColors.blue;
+                              textColorZ = AppColors.blue;
+                              textColorOk = AppColors.blue;
+                              textColorDontwant = AppColors.blue;
+                              textColorHelp = AppColors.blue;
+                              textColorSorry = AppColors.blue;
+                              textColorThankyou = AppColors.blue;
+                              textColorWelcome = AppColors.blue;
+                              textColorHello = AppColors.blue;
+                              textColorImfine = AppColors.blue;
+                              textColorDrink = AppColors.blue;
+
+                              speak('Emergency');
+                            });
+                          },
+                          child: ASLWidget(
+                            alphabet: 'Emergency',
+                            containerColor: _containerColorEmergency,
+                            textColor: textColorEmergency,
                           ),
                         ),
                       ],
@@ -2677,23 +4758,80 @@ class AlphabetWidget extends StatelessWidget {
                     topRight: Radius.circular(20),
                   ),
                   child: Image(
-                      image: AssetImage('assets/aslAlphabet/$alphabet.gif'),
+                      image: AssetImage('assets/aslSamples/$alphabet.gif'),
                       fit: BoxFit.cover),
                 ),
               ),
               Align(
                 alignment: Alignment.topRight,
                 child: Container(
-                  margin: const EdgeInsets.all(20),
+                  margin: EdgeInsets.all(20),
                   width: 30,
                   height: 30,
                   child: Image(
-                    image: AssetImage('assets/aslAlphabet/$alphabet.png'),
+                    image: AssetImage('assets/aslSamples/$alphabet.png'),
                     fit: BoxFit.cover,
                   ),
                 ),
               ),
             ],
+          ),
+          SizedBox(height: height * 0.01),
+          Text(alphabet,
+              style: AppTextStyles.title.copyWith(
+                fontSize: 20,
+                color: textColor,
+              )),
+        ],
+      ),
+    );
+  }
+}
+
+class ASLWidget extends StatelessWidget {
+  final String alphabet;
+  final Color containerColor;
+  final Color textColor;
+  ASLWidget(
+      {super.key,
+      required this.alphabet,
+      required this.containerColor,
+      required this.textColor});
+
+  @override
+  Widget build(BuildContext context) {
+    final width = MediaQuery.of(context).size.width;
+    final height = MediaQuery.of(context).size.height;
+    return Container(
+      width: width / 2 - 40,
+      height: height / 5,
+      decoration: BoxDecoration(
+        color: containerColor,
+        borderRadius: BorderRadius.circular(20),
+        boxShadow: [
+          BoxShadow(
+            color: Color.fromARGB(255, 68, 68, 68).withOpacity(0.1),
+            spreadRadius: 5,
+            blurRadius: 8,
+            //offset: Offset(0, 3),
+          ),
+        ],
+      ),
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.start,
+        children: [
+          Container(
+            width: width / 2 - 40,
+            height: height / 5 - 40,
+            child: ClipRRect(
+              borderRadius: BorderRadius.only(
+                topLeft: Radius.circular(20),
+                topRight: Radius.circular(20),
+              ),
+              child: Image(
+                  image: AssetImage('assets/aslSamples/$alphabet.gif'),
+                  fit: BoxFit.cover),
+            ),
           ),
           SizedBox(height: height * 0.01),
           Text(alphabet,
