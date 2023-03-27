@@ -103,7 +103,8 @@ class _HomeScreenState extends State<HomeScreen> {
                                       children: [
                                         Text(
                                           'Welcome to',
-                                          style: AppTextStyles.subtitle,
+                                          style: AppTextStyles.title
+                                              .copyWith(color: AppColors.brown),
                                         ),
                                       ],
                                     ),

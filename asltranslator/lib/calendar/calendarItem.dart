@@ -42,8 +42,9 @@ class _CalendarWeeklyState extends State<CalendarWeekly> {
           defaultTextStyle: const TextStyle(
             fontSize: 12,
           ),
-          weekendTextStyle:
-              const TextStyle(fontSize: 12, color: AppColors.orange),
+          weekendTextStyle: const TextStyle(
+            fontSize: 12,
+          ),
           cellMargin: const EdgeInsets.all(8),
           todayDecoration: BoxDecoration(
             color: AppColors.blue,
@@ -92,11 +93,11 @@ class _CalendarWeeklyState extends State<CalendarWeekly> {
               ),
             ],
           ),
-          outsideTextStyle:
-              const TextStyle(fontSize: 12, color: AppColors.orange),
+          outsideTextStyle: const TextStyle(
+            fontSize: 12,
+          ),
           holidayTextStyle: const TextStyle(
             fontSize: 12,
-            color: AppColors.orange,
           ),
         ),
       ),

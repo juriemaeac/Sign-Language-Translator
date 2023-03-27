@@ -196,7 +196,7 @@ class _CommunicateScreenState extends State<CommunicateScreen> {
                       style: AppTextStyles.title.copyWith(
                         fontSize: 30,
                       )),
-                  SizedBox(height: height * 0.03),
+                  SizedBox(height: height * 0.025),
                   Container(
                     height: height * 0.05,
                     width: width,
@@ -262,7 +262,7 @@ class _CommunicateScreenState extends State<CommunicateScreen> {
                     ),
                   ),
                   SizedBox(
-                    height: height * 0.03,
+                    height: height * 0.025,
                   ),
                   isASL ? speechToASL() : asltoSpeech(),
                 ],
@@ -277,14 +277,14 @@ class _CommunicateScreenState extends State<CommunicateScreen> {
       children: [
         Container(
           width: width,
-          height: height * 0.28,
+          height: height * 0.3,
           child: Stack(
             children: [
               Container(
                 padding: const EdgeInsets.all(30),
                 alignment: Alignment.center,
                 width: width,
-                height: height * 0.32,
+                height: height * 0.3,
                 decoration: BoxDecoration(
                   color: AppColors.orange,
                   borderRadius: BorderRadius.all(
@@ -302,13 +302,13 @@ class _CommunicateScreenState extends State<CommunicateScreen> {
                   style: AppTextStyles.title.copyWith(fontSize: 18),
                   onChanged: (value) {
                     setState(() {
-                      //var lowerCaseValue = value.toLowerCase();
+                      var lowerCaseValue = value.toLowerCase();
                       var capitalizedValue =
-                          toBeginningOfSentenceCase(value) ?? "";
+                          toBeginningOfSentenceCase(lowerCaseValue) ?? "";
                       // if (capitalizedValue == "Ok") {
                       //   capitalizedValue == "Okay";
                       // }
-                      if (aslWordsNew.contains(value)) {
+                      if (aslWordsNew.contains(capitalizedValue)) {
                         voicetext = capitalizedValue;
                         print("Recognized Type Word: " + value);
                         print("Recognized Type Word Capital: " +
@@ -385,7 +385,7 @@ class _CommunicateScreenState extends State<CommunicateScreen> {
                     },
                     child: CircleAvatar(
                       backgroundColor: AppColors.blue,
-                      radius: 25,
+                      radius: 20,
                       child: Icon(
                         isListening ? Icons.mic : Icons.mic_none,
                         color: AppColors.beige,
@@ -398,7 +398,7 @@ class _CommunicateScreenState extends State<CommunicateScreen> {
           ),
         ),
         SizedBox(
-          height: height * 0.03,
+          height: height * 0.025,
         ),
         Container(
           margin: const EdgeInsets.only(bottom: 20),
@@ -427,7 +427,7 @@ class _CommunicateScreenState extends State<CommunicateScreen> {
         SizedBox(
           height: height * 0.01,
         ),
-        Center(
+        const Center(
           child: Text('Sign Language Resource Provided by SigningSavvy.',
               style: TextStyle(
                   color: Colors.grey,
@@ -453,70 +453,72 @@ class _CommunicateScreenState extends State<CommunicateScreen> {
         Container(
           alignment: Alignment.centerLeft,
           width: width,
-          height: height * 0.32,
+          //height: width,
           decoration: BoxDecoration(
             color: AppColors.orange,
             borderRadius: BorderRadius.all(
               Radius.circular(20),
             ),
           ),
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          child: Stack(
             children: [
               Container(
-                width: width * 0.7,
+                width: width,
                 child: ClipRRect(
                   borderRadius: BorderRadius.circular(20),
                   child: AspectRatio(
                       aspectRatio: 1, child: CameraPreview(cameraController)),
                 ),
               ),
-              Padding(
-                padding: const EdgeInsets.only(right: 15, top: 15),
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.start,
-                  children: [
-                    Container(
-                      width: width * 0.1,
-                      child: IconButton(
-                        onPressed: () {
-                          if (cameraIndex == 0) {
-                            setState(() {
-                              cameraIndex = 1;
-                              startCamera();
-                            });
-                          } else if (cameraIndex == 1) {
-                            setState(() {
-                              cameraIndex = 0;
-                              startCamera();
-                            });
-                          }
-                        },
-                        icon: Icon(
-                          Icons.change_circle,
-                          color: AppColors.beige,
-                        ),
+              Align(
+                alignment: Alignment.topRight,
+                child: Container(
+                  //width: 50,
+                  // decoration: BoxDecoration(
+                  //   shape: BoxShape.circle,
+                  //   color: AppColors.blue,
+                  // ),
+                  child: Padding(
+                    padding: const EdgeInsets.only(top: 10, right: 20.0),
+                    child: IconButton(
+                      onPressed: () {
+                        if (cameraIndex == 0) {
+                          setState(() {
+                            cameraIndex = 1;
+                            startCamera();
+                          });
+                        } else if (cameraIndex == 1) {
+                          setState(() {
+                            cameraIndex = 0;
+                            startCamera();
+                          });
+                        }
+                      },
+                      icon: Icon(
+                        Icons.change_circle_rounded,
+                        color: AppColors.orange,
+                        size: 40,
                       ),
                     ),
-                  ],
+                  ),
                 ),
               ),
             ],
           ),
         ),
         SizedBox(
-          height: height * 0.03,
+          height: height * 0.025,
         ),
         Container(
           width: width,
-          height: height * 0.3,
+          height: height - width - (height * 0.3),
           child: Stack(
             children: [
               Container(
                 padding: const EdgeInsets.all(30),
                 alignment: Alignment.center,
                 width: width,
-                height: height * 0.3,
+                height: height - width - (height * 0.3),
                 decoration: BoxDecoration(
                   color: AppColors.orange,
                   borderRadius: BorderRadius.all(
@@ -544,16 +546,19 @@ class _CommunicateScreenState extends State<CommunicateScreen> {
                                 fontSize: 15, color: AppColors.beige)),
                       ],
                     ),
+                    SizedBox(
+                      height: height * 0.02,
+                    )
                   ],
                 ),
               ),
               Align(
                 alignment: Alignment.bottomRight,
                 child: Container(
-                  margin: const EdgeInsets.only(bottom: 30, right: 30),
+                  margin: const EdgeInsets.only(bottom: 25, right: 25),
                   child: CircleAvatar(
                     backgroundColor: AppColors.blue,
-                    radius: 25,
+                    radius: 20,
                     child: IconButton(
                       onPressed: () {
                         speak(textvoice);

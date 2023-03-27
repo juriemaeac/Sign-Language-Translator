@@ -19,6 +19,8 @@ class AppColors {
   static const Color lightorange = Color(0xFFF5B472);
   static const Color darkorange = Color(0xFFDE9C5A);
   static const Color beige = Color(0xFFF5E0CB);
+
+  static const Color brown = Color(0xFF422F1A);
 }
 
 class AppTextStyles {
