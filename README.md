@@ -6,24 +6,24 @@ The application is developed using Flutter framework utilizing TFlite and teacha
 
 ### Starting Screen
 
-![image](https://github.com/juriemaeac/Sign-Language-Translator/assets/59803167/284d50fc-ca3c-41f2-a513-43f7bd12cb5a)
+![image](https://github.com/juriemaeac/Sign-Language-Translator/assets/59803167/fbfb4841-d49b-4561-8e20-44c3cf1a457b)
 
 ### Home Screen
 
-![image](https://github.com/juriemaeac/Sign-Language-Translator/assets/59803167/ebe04467-5704-4093-9a85-01a3cd5a58b6)
+![image](https://github.com/juriemaeac/Sign-Language-Translator/assets/59803167/df42d578-13bb-43d7-92e5-11a0c366de5d)
 
 ### Communicate Screen
 Users have the option to communicate using American Sign Language (ASL) through speech-to-text conversion or by signing in ASL, which will then be translated into text and audibly spoken.
 
-![image](https://github.com/juriemaeac/Sign-Language-Translator/assets/59803167/04fceeee-a756-473d-8239-d8eda3fbab22)
+![image](https://github.com/juriemaeac/Sign-Language-Translator/assets/59803167/7cb66a2e-7ec5-4d1b-badf-bf5cc7fd27f6)
 
 ### ASL Library
 
-![image](https://github.com/juriemaeac/Sign-Language-Translator/assets/59803167/978170d4-7cce-4209-b20a-40f7ac50ce2c)
+![image](https://github.com/juriemaeac/Sign-Language-Translator/assets/59803167/9b4ed031-9830-48a9-a54c-dc758905b0bc)
 
 ### Avatar Screen [indicated coming soom]
 
-![image](https://github.com/juriemaeac/Sign-Language-Translator/assets/59803167/3e5c5892-e923-46ba-aa34-4bcd681b2bad)
+![image](https://github.com/juriemaeac/Sign-Language-Translator/assets/59803167/1b0e7950-1e14-495d-81db-451db34ffabe)
 
 # Developers
 
